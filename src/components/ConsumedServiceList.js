@@ -2,7 +2,9 @@ import React from 'react'
 
 const ConsumedServiceList = () => {
   return (
-    <div>ConsumedServiceList</div>
+    <div>
+      <h2>CONSUMED SERVICES LIST</h2>
+    </div>
   )
 }
 

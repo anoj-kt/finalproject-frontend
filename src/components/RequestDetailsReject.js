@@ -2,7 +2,9 @@ import React from 'react'
 
 const RequestDetailsReject = () => {
   return (
-    <div>RequestDetailsReject</div>
+    <div>
+      <h2>SERVICE REQUEST DETAILS REJECTED</h2>
+    </div>
   )
 }
 

@@ -2,7 +2,9 @@ import React from 'react'
 
 const UserLogin = () => {
   return (
-    <div>UserLogin</div>
+    <div>
+      <h2>USER LOGIN</h2>
+    </div>
   )
 }
 

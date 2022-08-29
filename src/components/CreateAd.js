@@ -2,7 +2,9 @@ import React from 'react'
 
 const CreateAd = () => {
   return (
-    <div>CreateAd</div>
+    <div>
+      <h2>CREATE AD</h2>
+    </div>
   )
 }
 

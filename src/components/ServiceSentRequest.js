@@ -2,7 +2,9 @@ import React from 'react'
 
 const ServiceSentRequest = () => {
   return (
-    <div>ServiceSentRequest</div>
+    <div>
+      <h2>REQUEST SENT FOR A SERVICE</h2>
+    </div>
   )
 }
 

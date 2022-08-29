@@ -2,7 +2,7 @@ import React from 'react'
 
 const RequestDetailsPending = () => {
   return (
-    <div>RequestDetailsPending</div>
+    <h2>SERVICE REQUEST DETAILS PENDING</h2>
   )
 }
 

@@ -2,7 +2,9 @@ import React from 'react'
 
 const UserChangeAddress = () => {
   return (
-    <div>UserChangeAddress</div>
+    <div>
+      <h2>USER ADDRESS CHANGE</h2>
+    </div>
   )
 }
 

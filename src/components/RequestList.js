@@ -2,7 +2,9 @@ import React from 'react'
 
 const RequestList = () => {
   return (
-    <div>RequestList</div>
+    <div>
+      <h2>SERVICE REQUEST LIST</h2>
+    </div>
   )
 }
 

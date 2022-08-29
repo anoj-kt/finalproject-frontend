@@ -2,7 +2,9 @@ import React from 'react'
 
 const RequestDetailsDone = () => {
   return (
-    <div>RequestDetailsDone</div>
+    <div>
+      <h2>SERVICE REQUEST DETAILS = COMPLETED</h2>
+    </div>
   )
 }
 
