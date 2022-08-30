@@ -204,3 +204,30 @@ a {
 .nav__btn-search:hover {
   background-color: var(--main-green-alt);
 }
+
+/* =================HOME================= */
+.home__container {
+  background-color: var(--main-yellow);
+  background-image: url('./assets/images/home-background.png');
+  height: calc(100vh - 162.44px);
+}
+
+.home__text-left, .home__text-right{
+  display: inline-block;
+}
+
+.home__text-left p, .home__text-right p {
+  background-color: var(--main-black);
+  color: white;
+  padding: 1rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.home__text-left p{
+  border-radius: 0px 90px 90px 0px;
+}
+
+.home__text-right p {
+  border-radius: 90px 0px 0px 90px;
+  text-align: right;
+}
