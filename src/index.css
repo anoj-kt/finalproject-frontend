@@ -223,7 +223,7 @@ a {
 
 .home__text-right-COL {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .home__text-left, .home__text-right{
