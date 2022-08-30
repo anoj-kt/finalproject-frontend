@@ -1,7 +1,7 @@
-/* -----GOOGLE FONTS----- */
+/* =================GOOGLE FONT================= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
-/* -----VARIABLES----- */
+/* =================VARIABLES================= */
 :root {
     --header-height: 3rem;
 
@@ -52,7 +52,7 @@
 
 }
 
-/* -----BASE----- */
+/* =================BASE================= */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -79,7 +79,7 @@ a {
 }
 
 
-/* -----REUSABLE CLASSES----- */
+/* =================REUSABLE CLASSES================= */
 .button {
   border-radius: 10px;
   border: none;
@@ -98,11 +98,16 @@ a {
   color: white;
 }
 
-/* -----HEADER----- */
+.nopadding {
+  padding: 0 !important;
+}
+
+/* =================HEADER================= */
 .nav__container {
   background-color: var(--main-black);
 }
 
+/* -----nav logo and brandname----- */
 .nav__brand {
   display: flex;
   align-items: flex-end;
@@ -125,6 +130,7 @@ a {
   margin: 0;
 }
 
+/* -----nav register, login and creatad buttons----- */
 .nav__btns {
   display: flex;
   justify-content: flex-end;
@@ -163,6 +169,7 @@ a {
   margin: auto;
 }
 
+/* -----nav search bar----- */
 .nav__search {
   display: flex;
   justify-content: center;
@@ -203,4 +210,41 @@ a {
 
 .nav__btn-search:hover {
   background-color: var(--main-green-alt);
+}
+
+/* =================HOME================= */
+.home__container {
+  background-color: var(--main-yellow);
+  background-image: url('./assets/images/home-background.png');
+  background-position: bottom;
+  height: calc(100vh - 162.44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.home__text-right-COL {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home__text-left, .home__text-right{
+  display: inline-block;
+}
+
+.home__text-left p, .home__text-right p {
+  background-color: var(--main-black);
+  color: white;
+  padding: 1rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.home__text-left p{
+  border-radius: 0px 90px 90px 0px;
+}
+
+.home__text-right p {
+  border-radius: 90px 0px 0px 90px;
+  text-align: right;
 }
