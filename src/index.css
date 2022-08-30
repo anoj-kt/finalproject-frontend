@@ -105,6 +105,8 @@ a {
 /* =================HEADER================= */
 .nav__container {
   background-color: var(--main-black);
+  position: sticky;
+  top: 0;
 }
 
 /* -----nav logo and brandname----- */
@@ -253,4 +255,10 @@ a {
 .footer__container {
   background-color: var(--main-black);
   color: white;
+}
+
+.footer__COL {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
 }

@@ -5,8 +5,8 @@ import Col from 'react-bootstrap/Col';
 const Footer = () => {
   return (
     <Container fluid className="footer__container">
-      <Row>
-        <Col md={4}>
+      <Row className="justify-content-center">
+        <Col md={4} className="footer__COL">
           <div>
             <h5>About Us</h5>
             <p>The team</p>
@@ -15,7 +15,7 @@ const Footer = () => {
             <p>Terms & conditions</p>
           </div>
         </Col>
-        <Col md={4}>
+        <Col md={4} className="footer__COL">
           <div>
             <h5>Contact</h5>
             <p>Support</p>
@@ -24,7 +24,7 @@ const Footer = () => {
             <p>Contact us</p>
           </div>
         </Col>
-        <Col md={4}>
+        <Col md={4} className="footer__COL">
           <div>
             <h5>Social Media</h5>
             <p>Instagram</p>
