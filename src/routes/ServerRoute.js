@@ -23,6 +23,7 @@ import ServiceSentRequest from "./components/ServiceSentRequest";
 import ErrorPage from "./components/ErrorPage";
 import EditAd from "./components/EditAd";
 import EditAdConfirm from "./components/EditAdConfirm";
+import ProvidedServiceDetails from "../components/ProvidedServiceDetails";
 
 function ServerRoute() {
     return (
@@ -31,30 +32,43 @@ function ServerRoute() {
           <Header />        
             <div className="content">
               <Routes>
-                {/* Single Routes */}
+                {/* Home & Login */}                
                 <Route exact path="/" element={<Home />}></Route>
                 <Route path="/auth/login" element={<UserLogin />}></Route>
                 <Route path="/auth/signup" element={<UserSignup />}></Route>
-                <Route path="/profile" element={<UserProfile />}></Route>
-                <Route path="/404" element={<ErrorPage />}></Route>
-  
-                {/* Routes that need id  */}
-                <Route path="/providedservices" element={<ProvidedServiceList />}></Route>          
-                <Route path="/consumedservices" element={<ConsumedServiceList />}></Route>
-                <Route path="/changepw" element={<UserChangePw />}></Route>
-                <Route path="/changeavatar" element={<UserChangeAvatar />}></Route>
-                <Route path="/changephone" element={<UserChangeMobile />}></Route>
-                <Route path="/changeaddress" element={<UserChangeAddress />}></Route>
+
+                {/* User Profile  */}
+                <Route path="/user/:userid/profile" element={<UserProfile />}></Route>
+                <Route path="/user/:userId/profile/password" element={<UserChangePw />}></Route>
+                <Route path="/user/:userid/profile/photo" element={<UserChangeAvatar />}></Route>
+                <Route path="/user/:userId/profile/address" element={<UserChangeAddress />}></Route>
+                <Route path="/user/:userId/profile/telephone" element={<UserChangeMobile />}></Route>
+
+                {/* Advertise */}                
                 <Route path="/createad" element={<CreateAd />}></Route>              
-                <Route path="/editad" element={<EditAd />}></Route> 
-                <Route path="/editad" element={<EditAdConfirm />}></Route>
+                <Route path="/user/:userId/services/provided/:serviceId/edit" element={<EditAd />}></Route> 
+                <Route path="/user/:userId/services/provided/:serviceId/status/" element={<EditAdConfirm />}></Route>
+
+{/* DOUBLE CHECK Requests */}
                 <Route path="/requests" element={<RequestList />}></Route>
-                <Route path="/requests/details=true" element={<RequestDetailsDone />}></Route>
-                <Route path="/requests/details=pending" element={<RequestDetailsPending />}></Route>
-                <Route path="/requests/details=false" element={<RequestDetailsReject />}></Route>          
-                <Route path="/request/send" element={<ServiceSendRequest />}></Route>
-                <Route path="/request/sent" element={<ServiceSentRequest />}></Route>
-                <Route path="/service/details" element={<ConsumedServiceDetails />}></Route>
+                <Route path="user/:userId/services/provided/:serviceId/requests" element={<RequestDetailsDone />}></Route>
+                <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetailsPending />}></Route>
+                <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetailsReject />}></Route>
+
+                {/* Send Request to use a Service  */}
+                <Route path="/service/:serviceID/request/new" element={<ServiceSendRequest />}></Route>
+                <Route path="/service/serviceID/request/sent" element={<ServiceSentRequest />}></Route>
+
+                {/* Consumed Services  */}
+                <Route path="/user/:userId/services/consumed" element={<ConsumedServiceList />}></Route> 
+                <Route path="user/:userId/services/consumed/requests/:requestId" element={<ConsumedServiceDetails />}></Route>
+
+                {/* Provided Services  */}    
+                <Route path="/user/:userId/services/provided" element={<ProvidedServiceList />}></Route>          
+                <Route path="/user/:userId/services/provided/requests/:requestId" element={<ProvidedServiceDetails />}></Route>          
+                
+                {/* 404  */}
+                <Route path="/404" element={<ErrorPage />}></Route>
               </Routes>
             </div>
           <Footer />
