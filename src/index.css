@@ -1,7 +1,7 @@
-/* -----GOOGLE FONTS----- */
+/* =================GOOGLE FONT================= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
-/* -----VARIABLES----- */
+/* =================VARIABLES================= */
 :root {
     --header-height: 3rem;
 
@@ -52,7 +52,7 @@
 
 }
 
-/* -----BASE----- */
+/* =================BASE================= */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -79,7 +79,7 @@ a {
 }
 
 
-/* -----REUSABLE CLASSES----- */
+/* =================REUSABLE CLASSES================= */
 .button {
   border-radius: 10px;
   border: none;
@@ -102,11 +102,12 @@ a {
   padding: 0 !important;
 }
 
-/* -----HEADER----- */
+/* =================HEADER================= */
 .nav__container {
   background-color: var(--main-black);
 }
 
+/* -----nav logo and brandname----- */
 .nav__brand {
   display: flex;
   align-items: flex-end;
@@ -129,6 +130,7 @@ a {
   margin: 0;
 }
 
+/* -----nav register, login and creatad buttons----- */
 .nav__btns {
   display: flex;
   justify-content: flex-end;
@@ -167,6 +169,7 @@ a {
   margin: auto;
 }
 
+/* -----nav search bar----- */
 .nav__search {
   display: flex;
   justify-content: center;
