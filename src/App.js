@@ -6,9 +6,6 @@ import UserLogin from './components/UserLogin';
 import UserSignup from './components/UserSignup';
 import Footer from './components/Footer';
 
-
-
-
 function App() {
   return (
     <Routing>
@@ -19,8 +16,7 @@ function App() {
               {/* Single Routes */}
               <Route exact path="/" element={<Home />}></Route>
               <Route path="/auth/login" element={<UserLogin />}></Route>
-              <Route path="/auth/signup" element={<UserSignup />}></Route>
-                            
+              <Route path="/auth/signup" element={<UserSignup />}></Route>                            
             </Routes>
           </div>
         <Footer />
