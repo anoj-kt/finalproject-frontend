@@ -98,6 +98,10 @@ a {
   color: white;
 }
 
+.nopadding {
+  padding: 0 !important;
+}
+
 /* -----HEADER----- */
 .nav__container {
   background-color: var(--main-black);
@@ -209,7 +213,17 @@ a {
 .home__container {
   background-color: var(--main-yellow);
   background-image: url('./assets/images/home-background.png');
+  background-position: bottom;
   height: calc(100vh - 162.44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.home__text-right-COL {
+  display: flex;
+  justify-content: end;
 }
 
 .home__text-left, .home__text-right{

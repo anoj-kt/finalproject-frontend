@@ -6,16 +6,15 @@ const Home = () => {
   return (
     <Container fluid className="home__container">
       <Row>
-        <Col>
+        <Col className="nopadding">
           <div className="home__text-left">
-            <p>What is our aim?</p>
+            <p>What do we do?</p>
             <p>We bring people together</p>
           </div>
-          
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col md={{ span: 6, offset: 6 }} className="home__text-right-COL nopadding">
           <div className="home__text-right">
             <p>Your Service Market is a place where you can share your knowledge and skills with others.</p>
             <p>Give and Recieve Feedback to help the Community</p>
