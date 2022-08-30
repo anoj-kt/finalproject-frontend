@@ -4,29 +4,29 @@ import Col from 'react-bootstrap/Col';
 
 const Footer = () => {
   return (
-    <Container>
+    <Container fluid className="footer__container">
       <Row>
-        <Col>
+        <Col md={4}>
           <div>
-            <h6>About Us</h6>
+            <h5>About Us</h5>
             <p>The team</p>
             <p>Help</p>
             <p>Privacy</p>
             <p>Terms & conditions</p>
           </div>
         </Col>
-        <Col>
+        <Col md={4}>
           <div>
-            <h6>Contact</h6>
+            <h5>Contact</h5>
             <p>Support</p>
             <p>FAQ</p>
             <p>Cookies policy</p>
             <p>Contact us</p>
           </div>
         </Col>
-        <Col>
+        <Col md={4}>
           <div>
-            <h6>Social Media</h6>
+            <h5>Social Media</h5>
             <p>Instagram</p>
             <p>Facebook</p>
             <p>Twitter</p>

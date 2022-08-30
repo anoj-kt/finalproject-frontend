@@ -248,3 +248,9 @@ a {
   border-radius: 90px 0px 0px 90px;
   text-align: right;
 }
+
+/* =================FOOTER================= */
+.footer__container {
+  background-color: var(--main-black);
+  color: white;
+}
