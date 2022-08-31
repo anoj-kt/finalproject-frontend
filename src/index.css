@@ -264,7 +264,19 @@ a {
 }
 
 .signup__submit {
+  width: 100%;
+  text-align: center;
+}
+
+.signup__submit-btn {
   background-color: var(--main-yellow);
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 1rem;
+}
+
+.signup__submit-btn:hover {
+  background-color: var(--main-yellow-alt);
 }
 
 /* =================FOOTER================= */

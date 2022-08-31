@@ -108,12 +108,14 @@ const UserSignup = () => {
                 type="text"
               />
             </FormGroup>
-            <button
-            className="signup__submit button"
-            type="submit"
-            >
-              Create Account
-            </button>
+            <div className="signup__submit">
+              <button
+              className="signup__submit-btn button"
+              type="submit"
+              >
+                Create Account
+              </button>
+            </div>
           </Form>
         </Col>
       </Row>
