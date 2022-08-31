@@ -11,7 +11,7 @@ const UserSignup = () => {
     <Container className="signup__container">
       <Row>
         <Col lg={{ span: 6, offset: 3 }}>
-          <h4>Create Account</h4>
+          <h4>Sign Up</h4>
           <Form>
             <FormGroup>
               <Label for="name">
@@ -108,11 +108,12 @@ const UserSignup = () => {
                 type="text"
               />
             </FormGroup>
-            <Button
+            <button
+            className="signup__submit button"
             type="submit"
             >
-              Submit
-            </Button>
+              Create Account
+            </button>
           </Form>
         </Col>
       </Row>
