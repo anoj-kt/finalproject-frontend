@@ -252,7 +252,15 @@ a {
 }
 
 /* =================USER SIGN UP================= */
+.signup__container {
+  padding: 2rem 0;
+}
 
+.signup__container h4{
+  padding: 0.5rem 0 1rem;
+  text-align: center;
+  font-weight: var(--font-semi-bold);
+}
 
 /* =================FOOTER================= */
 .footer__container {

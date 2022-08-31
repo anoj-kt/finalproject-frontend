@@ -8,9 +8,10 @@ const UserSignup = () => {
 
 
   return (
-    <Container>
+    <Container className="signup__container">
       <Row>
         <Col lg={{ span: 6, offset: 3 }}>
+          <h4>Create Account</h4>
           <Form>
             <FormGroup>
               <Label for="name">
