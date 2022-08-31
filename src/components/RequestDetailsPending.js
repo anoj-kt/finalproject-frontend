@@ -1,8 +1,8 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 
 const RequestDetailsPending = () => {
   return (
-    <div>RequestDetailsPending</div>
+    <h2>SERVICE REQUEST DETAILS PENDING</h2>
   )
 }
 

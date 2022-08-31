@@ -217,7 +217,9 @@ a {
 /* =================HOME================= */
 .home__container {
   background-color: var(--main-yellow);
-  background-image: url('./assets/images/home-background.png');
+/* background-image: url('./assets/images/home-background.png'); */
+ /* background-image: url('./assets/images/home-background.png'); */
+
   background-position: bottom;
   height: calc(100vh - 162.44px);
   display: flex;
