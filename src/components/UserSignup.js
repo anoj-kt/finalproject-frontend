@@ -8,6 +8,7 @@ const initialstate = {
   name: "",
   email: "",
   password: "",
+  confirmPassword: "",
   birthdate: Date,
   telephone: "",
   address: {
@@ -19,12 +20,29 @@ const initialstate = {
 }
 
 const passwordVerification= {
-  matchPasswords: false,
+  matchPasswords: true,
 }
 
 const UserSignup = () => {
   const [newUser, setNewUser] = useState(initialstate);
   const [passwordError, setPasswordError] = useState(passwordVerification)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if(newUser.password !== newUser.confirmPassword) {
+      setPasswordError({matchPasswords: false})
+      return
+    } 
+
+    fetch('http://localhost:8000/testw', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(newUser)
+    })
+    .then((res) => console.log(res))
+    .catch(err => console.log(err))
+  }
 
   const handleChange = (e) => {
     const {name, value} = e.target;
@@ -46,20 +64,19 @@ const UserSignup = () => {
       return
     }
 
-    if(name === 'confirmPassword') {
-      setPasswordError({matchPasswords: newUser.password === value})
-    }
+    // if(name === 'confirmPassword') {
+    //   setPasswordError({matchPasswords: newUser.password === value})
+    // }
 
     setNewUser({...newUser, [name]: value});
   }
-
 
   return (
     <Container className="signup__container">
       <Row>
         <Col lg={{ span: 6, offset: 3 }}>
           <h4>Sign Up</h4>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <FormGroup>
               <Label for="name">
                 Full name
@@ -180,7 +197,7 @@ const UserSignup = () => {
             <div className="signup__submit">
               <button
               className="signup__submit-btn button"
-              type="submit"
+
               >
                 Create Account
               </button>
