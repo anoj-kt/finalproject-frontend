@@ -18,8 +18,13 @@ const initialstate = {
   }
 }
 
+const passwordVerification= {
+  matchPasswords: false,
+}
+
 const UserSignup = () => {
   const [newUser, setNewUser] = useState(initialstate);
+  const [passwordError, setPasswordError] = useState(passwordVerification)
 
   const handleChange = (e) => {
     const {name, value} = e.target;
@@ -30,7 +35,7 @@ const UserSignup = () => {
       return
     }
 
-    if(name === 'street' || 'postalCode' || 'city' || 'country') {
+    if(name === 'street' || name === 'postalCode' || name === 'city' || name === 'country') {
       setNewUser({
         ...newUser, 
         address: {
@@ -39,6 +44,10 @@ const UserSignup = () => {
         }
       });
       return
+    }
+
+    if(name === 'confirmPassword') {
+      setPasswordError({matchPasswords: newUser.password === value})
     }
 
     setNewUser({...newUser, [name]: value});
@@ -89,6 +98,9 @@ const UserSignup = () => {
                 onChange={handleChange}
                 required
               />
+              <FormFeedback invalid>
+                Passwords need to match!
+              </FormFeedback>
             </FormGroup>
             <FormGroup>
               <Label for="confirmPassword">
@@ -99,10 +111,11 @@ const UserSignup = () => {
                 name="confirmPassword"
                 placeholder=""
                 type="password"
-                valid
                 required
+                onChange={handleChange}
+                invalid={!passwordError.matchPasswords}
               />
-              <FormFeedback valid>
+              <FormFeedback invalid>
                 Passwords need to match!
               </FormFeedback>
             </FormGroup>
