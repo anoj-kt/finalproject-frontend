@@ -1,4 +1,4 @@
-import { BrowserRouter as Routing, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import './index.css';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -9,20 +9,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <Routing>
-      <div className="Header">   
-        <Header />              
-          <div className="content">
-            <Routes>
-              {/* Single Routes */}
-              <Route exact path="/" element={<Home />}></Route>
-              <Route path="/auth/login" element={<UserLogin />}></Route>
-              <Route path="/auth/signup" element={<UserSignup />}></Route>                            
-            </Routes>
-          </div>
-        <Footer />
-      </div>
-    </Routing>
+    <div className="Header">   
+      <Header />              
+        <div className="content">
+          <Routes>
+            {/* Single Routes */}
+            <Route exact path="/" element={<Home />}></Route>
+            <Route path="/auth/login" element={<UserLogin />}></Route>
+            <Route path="/auth/signup" element={<UserSignup />}></Route>                            
+          </Routes>
+        </div>
+      <Footer />
+    </div>
   );
 }
 
