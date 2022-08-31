@@ -279,6 +279,12 @@ a {
   background-color: var(--main-yellow-alt);
 }
 
+/* =================USER LOGIN (Login component uses classes as well)================= */
+.login__container {
+  /* height: calc(100vh - (162.44px + 182.01px)); */
+  overflow: auto;
+}
+
 /* =================FOOTER================= */
 .footer__container {
   background-color: var(--main-black);

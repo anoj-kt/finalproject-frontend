@@ -12,7 +12,7 @@ const UserLogin = () => {
   const [user, setUser] = useState(initialstate);
 
   return (
-    <Container className="signup__container">
+    <Container className="signup__container login__container">
     <Row>
       <Col lg={{ span: 6, offset: 3 }}>
         <h4>Log in</h4>
