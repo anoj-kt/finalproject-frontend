@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { Form, FormGroup, Label, Input } from 'reactstrap'
-
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 
 const UserSignup = () => {
@@ -31,7 +32,7 @@ const UserSignup = () => {
               <Input
                 id="email"
                 name="email"
-                placeholder="This email will be used for logging in"
+                placeholder="You will be using this email to login"
                 type="email"
               />
             </FormGroup>
@@ -66,6 +67,46 @@ const UserSignup = () => {
                 name="birthdate"
                 placeholder=""
                 type="date"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="telephone">
+                Mobile number
+              </Label>
+              <PhoneInput
+                id="telephone"
+                country={'de'}
+              />
+            </FormGroup>
+            <Label>
+              Address (optional)
+            </Label>
+            <FormGroup>
+              <Input
+                name="street"
+                placeholder="Street and housenumber"
+                type="text"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Input
+                name="postalCode"
+                placeholder="Postal Code"
+                type="text"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Input
+                name="city"
+                placeholder="City"
+                type="text"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Input
+                name="country"
+                placeholder="Country"
+                type="text"
               />
             </FormGroup>
             <Button
