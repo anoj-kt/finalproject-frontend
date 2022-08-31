@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Form, FormGroup, Label, Input } from 'reactstrap'
+import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
@@ -61,6 +61,7 @@ const UserSignup = () => {
                 placeholder="Please enter your first and last name"
                 type="text"
                 onChange={handleChange}
+                required
               />
             </FormGroup>
             <FormGroup>
@@ -73,6 +74,7 @@ const UserSignup = () => {
                 placeholder="You will be using this email to login"
                 type="email"
                 onChange={handleChange}
+                required
               />
             </FormGroup>
             <FormGroup>
@@ -85,6 +87,7 @@ const UserSignup = () => {
                 placeholder=""
                 type="password"
                 onChange={handleChange}
+                required
               />
             </FormGroup>
             <FormGroup>
@@ -96,7 +99,12 @@ const UserSignup = () => {
                 name="confirmPassword"
                 placeholder=""
                 type="password"
+                valid
+                required
               />
+              <FormFeedback valid>
+                Passwords need to match!
+              </FormFeedback>
             </FormGroup>
             <FormGroup>
               <Label for="birthdate">
