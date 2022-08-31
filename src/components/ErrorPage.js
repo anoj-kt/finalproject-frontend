@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 
-const CreateAd = () => {
+const errorPage = () => {
   return (
     <div>
-      <h2>CREATE AD</h2>
+      <h2>404 NOT FOUND</h2>
     </div>
   )
 }
 
-export default CreateAd
+export default errorPage

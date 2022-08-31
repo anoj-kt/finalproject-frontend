@@ -1,8 +1,10 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 
 const UserProfile = () => {
   return (
-    <div>UserProfile</div>
+    <div>
+      <h2>USER PROFILE</h2>
+    </div>
   )
 }
 

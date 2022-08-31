@@ -1,7 +1,11 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 
-export const ProvidedServiceList = () => {
+const ProvidedServiceList = () => {
   return (
-    <div>ProvidedServiceList</div>
+    <div>
+      <h2>PROVIDED SERVICE LIST</h2>
+    </div>
   )
 }
+
+export default ProvidedServiceList

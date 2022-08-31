@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 
-const CreateAd = () => {
+const EditAd = () => {
   return (
     <div>
-      <h2>CREATE AD</h2>
+        <h2>EDIT AD</h2>
     </div>
   )
 }
 
-export default CreateAd
+export default EditAd

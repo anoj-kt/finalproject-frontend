@@ -1,8 +1,10 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 
 const UserChangeMobile = () => {
   return (
-    <div>UserChangeMobile</div>
+    <div>
+      <h2>USER MOBILEPHONE NUMBER CHANGE</h2>
+    </div>
   )
 }
 

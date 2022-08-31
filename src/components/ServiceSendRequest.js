@@ -1,8 +1,10 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 
 const ServiceSendRequest = () => {
   return (
-    <div>ServiceSendRequest</div>
+    <div>
+      <h2>SEND REQUEST FOR A SERVICE</h2>
+    </div>
   )
 }
 
