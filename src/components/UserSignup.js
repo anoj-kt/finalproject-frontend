@@ -1,12 +1,25 @@
+import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 import { Form, FormGroup, Label, Input } from 'reactstrap'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
+const initialstate = {
+  name: "",
+  email: "",
+  birthdate: Date,
+  telephone: "",
+  adress: {
+    street: "",
+    postalCode: "",
+    city:"",
+    country:""
+  }
+}
+
 const UserSignup = () => {
-
-
+  const [newUser, setNewUser] = useState(initialstate);
+  
   return (
     <Container className="signup__container">
       <Row>
