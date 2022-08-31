@@ -1,0 +1,264 @@
+/* =================GOOGLE FONT================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+/* =================VARIABLES================= */
+:root {
+    --header-height: 3rem;
+
+    /* -----Colors----- */
+    --hue-color: 47;
+
+    --main-yellow: hsl(var(--hue-color), 97%, 61%);
+    --main-yellow-second: hsla(var(--hue-color), 69%, 61%, 0.9); 
+    --main-yellow-alt: hsl(var(--hue-color), 57%, 53%); 
+    --main-yellow-lighter: hsl(var(--hue-color), 92%, 85%); 
+    --main-black: hsl(0, 0%, 17%);
+    --main-green: hsl(130, 55%, 45%);
+    --main-green-alt: hsl(130, 75%, 35%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: white;
+
+    /* -----Font style----- */
+    --body-font: 'Montserrat', sans-serif;
+
+    /* -----Font size----- */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* -----Font weight----- */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /* -----Margin bottom----- */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /* -----Z index----- */
+
+}
+
+/* =================BASE================= */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =================REUSABLE CLASSES================= */
+.button {
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: var(--font-medium);
+}
+
+.icon {
+  padding-right: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.icon-white {
+  padding-right: 0.25rem;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.nopadding {
+  padding: 0 !important;
+}
+
+/* =================HEADER================= */
+.nav__container {
+  background-color: var(--main-black);
+  position: sticky;
+  top: 0;
+}
+
+/* -----nav logo and brandname----- */
+.nav__brand {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav__logo {
+  padding: 0.5rem 0.5rem 0;
+  width: 7rem;
+}
+
+.nav__logo-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.nav__logo-title * {
+  color: white;
+  padding-left: 0.5rem;
+  margin: 0;
+}
+
+/* -----nav register, login and creatad buttons----- */
+.nav__btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.nav__btn-reg {
+  background-color: white;
+  width: 6.5rem;
+  margin-right: 1rem;
+}
+
+.nav__btn-login {
+  background-color: var(--main-yellow);
+  width: 6.5rem;
+  margin-right: 1rem;
+}
+
+.nav__btn-login:hover {
+  background-color: var(--main-yellow-alt);
+}
+
+.nav__btn-createad {
+  display: flex;
+  color: white;
+  cursor: pointer;
+  padding-top: 0.5rem;
+  font-weight: var(--font-medium);
+}
+
+.nav__btn-createad:hover {
+  color: var(--main-yellow);
+}
+
+.nav__btn-createad p{
+  margin: auto;
+}
+
+/* -----nav search bar----- */
+.nav__search {
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 0 0.5rem 0;
+}
+
+.nav__search input {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+
+.nav__search input:focus::placeholder {
+  color: transparent;
+}
+
+.nav__search-input, .nav__search-location {
+  background-color: white;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.nav__search-input {
+  border-radius: 10px 0px 0px 10px;
+  width: 40rem;
+}
+
+.nav__search-location {
+  border-radius: 0px 10px 10px 0px;
+  width: 20rem;
+}
+
+.nav__btn-search {
+  background-color: var(--main-green);
+  color: white;
+  font-weight: var(--font-medium);
+}
+
+.nav__btn-search:hover {
+  background-color: var(--main-green-alt);
+}
+
+/* =================HOME================= */
+.home__container {
+  background-color: var(--main-yellow);
+  /* background-image: url('./assets/images/home-background.png'); */
+  background-position: bottom;
+  height: calc(100vh - 162.44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.home__text-right-COL {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home__text-left, .home__text-right{
+  display: inline-block;
+}
+
+.home__text-left p, .home__text-right p {
+  background-color: var(--main-black);
+  color: white;
+  padding: 1rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.home__text-left p{
+  border-radius: 0px 90px 90px 0px;
+}
+
+.home__text-right p {
+  border-radius: 90px 0px 0px 90px;
+  text-align: right;
+}
+
+/* =================FOOTER================= */
+.footer__container {
+  background-color: var(--main-black);
+  color: white;
+}
+
+.footer__COL {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
