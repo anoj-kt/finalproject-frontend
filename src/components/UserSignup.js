@@ -7,6 +7,7 @@ import 'react-phone-input-2/lib/style.css'
 const initialstate = {
   name: "",
   email: "",
+  password: "",
   birthdate: Date,
   telephone: "",
   adress: {
@@ -19,7 +20,18 @@ const initialstate = {
 
 const UserSignup = () => {
   const [newUser, setNewUser] = useState(initialstate);
-  
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    if(name === 'birthdate') {
+      let date = new Date(value);
+      setNewUser({...newUser, [name]: date});
+      return
+    }
+    setNewUser({...newUser, [name]: value})
+  }
+
+
   return (
     <Container className="signup__container">
       <Row>
@@ -35,6 +47,7 @@ const UserSignup = () => {
                 name="name"
                 placeholder="Please enter your first and last name"
                 type="text"
+                onChange={handleChange}
               />
             </FormGroup>
             <FormGroup>
@@ -46,6 +59,7 @@ const UserSignup = () => {
                 name="email"
                 placeholder="You will be using this email to login"
                 type="email"
+                onChange={handleChange}
               />
             </FormGroup>
             <FormGroup>
@@ -57,6 +71,7 @@ const UserSignup = () => {
                 name="password"
                 placeholder=""
                 type="password"
+                onChange={handleChange}
               />
             </FormGroup>
             <FormGroup>
@@ -79,6 +94,7 @@ const UserSignup = () => {
                 name="birthdate"
                 placeholder=""
                 type="date"
+                onChange={handleChange}
               />
             </FormGroup>
             <FormGroup>
@@ -87,7 +103,9 @@ const UserSignup = () => {
               </Label>
               <PhoneInput
                 id="telephone"
+                name="telephone"
                 country={'de'}
+                onChange={(phone, country, e, formattedvalue )=> setNewUser({...newUser, telephone: formattedvalue})}
               />
             </FormGroup>
             <Label>
@@ -98,6 +116,7 @@ const UserSignup = () => {
                 name="street"
                 placeholder="Street and housenumber"
                 type="text"
+                onChange={handleChange}
               />
             </FormGroup>
             <FormGroup>
@@ -105,6 +124,7 @@ const UserSignup = () => {
                 name="postalCode"
                 placeholder="Postal Code"
                 type="text"
+                onChange={handleChange}
               />
             </FormGroup>
             <FormGroup>
@@ -112,6 +132,7 @@ const UserSignup = () => {
                 name="city"
                 placeholder="City"
                 type="text"
+                onChange={handleChange}
               />
             </FormGroup>
             <FormGroup>
@@ -119,6 +140,7 @@ const UserSignup = () => {
                 name="country"
                 placeholder="Country"
                 type="text"
+                onChange={handleChange}
               />
             </FormGroup>
             <div className="signup__submit">
