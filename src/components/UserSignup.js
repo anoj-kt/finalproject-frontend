@@ -10,7 +10,7 @@ const initialstate = {
   password: "",
   birthdate: Date,
   telephone: "",
-  adress: {
+  address: {
     street: "",
     postalCode: "",
     city:"",
@@ -23,12 +23,25 @@ const UserSignup = () => {
 
   const handleChange = (e) => {
     const {name, value} = e.target;
+
     if(name === 'birthdate') {
       let date = new Date(value);
       setNewUser({...newUser, [name]: date});
       return
     }
-    setNewUser({...newUser, [name]: value})
+
+    if(name === 'street' || 'postalCode' || 'city' || 'country') {
+      setNewUser({
+        ...newUser, 
+        address: {
+          ...newUser.address,
+          [name]: value
+        }
+      });
+      return
+    }
+
+    setNewUser({...newUser, [name]: value});
   }
 
 
