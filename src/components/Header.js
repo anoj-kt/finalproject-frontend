@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -16,8 +17,12 @@ const Header = () => {
       </Col>
       <Col className="nav__btns">
         <div>
-          <button className="button nav__btn-reg">Register</button>
-          <button className="button nav__btn-login">Log in</button>
+          <Link to="/auth/signup">
+            <button className="button nav__btn-reg">Register</button>
+          </Link>
+          <Link to="/auth/login">
+            <button className="button nav__btn-login">Log in</button>
+          </Link>
           <div className="nav__btn-createad">
             <i className="uil uil-plus icon"></i>
             <p>Create your advertisement</p>
