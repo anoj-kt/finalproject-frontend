@@ -10,7 +10,7 @@ const UserSignup = () => {
   return (
     <Container>
       <Row>
-        <Col md={{ span: 6, offset: 3 }}>
+        <Col lg={{ span: 6, offset: 3 }}>
           <Form>
             <FormGroup>
               <Label for="name">
