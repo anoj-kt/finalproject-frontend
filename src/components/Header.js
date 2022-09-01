@@ -8,12 +8,15 @@ const Header = () => {
   return (
     <Container fluid className="nav__container">
     <Row>
+      
       <Col xs={12} sm={6} className="nav__brand">
-       <img src={logo} alt="logo" className="nav__logo" />
-        <div className="nav__logo-title">
-          <h1>helpmarket</h1>
-          <p>affordable, fast, reliable, and local</p>
-        </div>
+        <Link to="/" className="nav__brand">
+          <img src={logo} alt="logo" className="nav__logo" />
+          <div className="nav__logo-title">
+            <h1>helpmarket</h1>
+            <p>affordable, fast, reliable, and local</p>
+          </div>
+        </Link>
       </Col>
       <Col className="nav__btns">
         <div>

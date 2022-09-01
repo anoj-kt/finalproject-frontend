@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="Header">   
+    <div className="header">   
       <Header />              
         <div className="content">
           <Routes>
