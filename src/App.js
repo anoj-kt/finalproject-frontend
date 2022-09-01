@@ -5,6 +5,7 @@ import Home from './components/Home';
 import UserLogin from './components/UserLogin';
 import UserSignup from './components/UserSignup';
 import Footer from './components/Footer';
+import ErrorPage from './components/ErrorPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
             {/* Single Routes */}
             <Route exact path="/" element={<Home />}></Route>
             <Route path="/auth/login" element={<UserLogin />}></Route>
-            <Route path="/auth/signup" element={<UserSignup />}></Route>                            
+            <Route path="/auth/signup" element={<UserSignup />}></Route>
+            <Route path="/404" element={<ErrorPage />}></Route>                         
           </Routes>
         </div>
       <Footer />
