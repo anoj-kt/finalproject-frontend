@@ -43,21 +43,19 @@ const CreateAd = () => {
               }}
             />
           </FormGroup>
-          {/* ======PRICE====== */}
-          <FormGroup>
-            <Label for="description">
-              Price
-            </Label>
-            <Input
-              id="description"
-              name="description"
-              placeholder=""
-              type="number"
-              required
-            />
-          </FormGroup>
-          {/* ======PRICE CALC TYPE (RADIO)====== */}
+          {/* ======PRICE AND PRICE TYPE====== */}
           <FormGroup tag="fieldset" className="createad__radio">
+            {/* ======PRICE====== */}
+            <FormGroup>
+              <Label>
+                Price
+              </Label>
+              <Input
+                name="priceCalculationType"
+                type="text"
+              />
+              {' '}
+            </FormGroup>
             {/* ======PER HOUR====== */}
             <FormGroup check>
               <Input
