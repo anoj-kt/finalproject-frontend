@@ -13,7 +13,7 @@ const UserLogin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     fetch('http://localhost:8000/testw', { //=====CHANGE URL=====//
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -71,6 +71,10 @@ const UserLogin = () => {
             </button>
           </div>
         </Form>
+        <div>
+          Dont't have an account yet?
+          <Link to="/auth/signup">Sign up here!</Link>
+        </div>
       </Col>
     </Row>
   </Container>
