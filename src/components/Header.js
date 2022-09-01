@@ -26,10 +26,12 @@ const Header = () => {
           <Link to="/auth/login">
             <button className="button nav__btn-login">Log in</button>
           </Link>
+          <Link to="/user/:userId/services/provided/new" style={{textDecoration: 'none'}}>
           <div className="nav__btn-createad">
             <i className="uil uil-plus icon"></i>
             <p>Create your advertisement</p>
           </div>
+          </Link>
         </div>
       </Col>
     </Row>

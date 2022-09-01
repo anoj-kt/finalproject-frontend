@@ -1,11 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Header from './components/Header';
 import Home from './components/Home';
 import UserLogin from './components/UserLogin';
 import UserSignup from './components/UserSignup';
 import Footer from './components/Footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import CreateAd from './components/CreateAd'
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
             {/* Single Routes */}
             <Route exact path="/" element={<Home />}></Route>
             <Route path="/auth/login" element={<UserLogin />}></Route>
-            <Route path="/auth/signup" element={<UserSignup />}></Route>                            
+            <Route path="/auth/signup" element={<UserSignup />}></Route>
+            <Route path="/user/:userId/services/provided/new" element={<CreateAd />}></Route>                             
           </Routes>
         </div>
       <Footer />
