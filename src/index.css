@@ -390,6 +390,7 @@ a {
   .footer__container {
     background-color: var(--main-black);
     color: white;
+  }
 
 /* =================USER LOGIN (Login component uses classes as well)================= */
 
