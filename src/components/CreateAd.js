@@ -23,6 +23,23 @@ const initialstate = {
 const CreateAd = () => {
   const [newAd, setNewAd] = useState(initialstate);
 
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+
+    if(name === 'street' || name === 'postalCode' || name === 'city' || name === 'country') {
+      setNewAd({
+        ...newAd, 
+        address: {
+          ...newAd.address,
+          [name]: value
+        }
+      });
+      return
+    }
+
+    setNewAd({...newAd, [name]: value});
+  }
+
   return (
     <Container className="form__container">
       <Row className="justify-content-center">
@@ -40,6 +57,7 @@ const CreateAd = () => {
               placeholder=""
               type="text"
               required
+              onChange={handleChange}
             />
           </FormGroup>
           {/* ======DESCRIPTION====== */}
@@ -57,6 +75,7 @@ const CreateAd = () => {
                 height: '15rem',
                 resize: 'none' 
               }}
+              onChange={handleChange}
             />
           </FormGroup>
           {/* ======PRICE AND PRICE TYPE====== */}
@@ -67,8 +86,9 @@ const CreateAd = () => {
                 Price
               </Label>
               <Input
-                name="priceCalculationType"
+                name="price"
                 type="text"
+                onChange={handleChange}
               />
               {' '}
             </FormGroup>
@@ -77,6 +97,8 @@ const CreateAd = () => {
               <Input
                 name="priceCalculationType"
                 type="radio"
+                value={'per_hour'}
+                onChange={handleChange}
               />
               {' '}
               <Label check>
@@ -88,6 +110,8 @@ const CreateAd = () => {
               <Input
                 name="priceCalculationType"
                 type="radio"
+                value={'per_squared_meter'}
+                onChange={handleChange}
               />
               {' '}
               <Label check>
@@ -99,6 +123,8 @@ const CreateAd = () => {
               <Input
                 name="priceCalculationType"
                 type="radio"
+                value={'fixed'}
+                onChange={handleChange}
               />
               {' '}
               <Label check>
@@ -110,6 +136,8 @@ const CreateAd = () => {
               <Input
                 name="priceCalculationType"
                 type="radio"
+                value={'negotiable'}
+                onChange={handleChange}
               />
               {' '}
               <Label check>
