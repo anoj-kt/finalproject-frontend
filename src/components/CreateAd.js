@@ -61,7 +61,7 @@ const CreateAd = () => {
             {/* ======PER HOUR====== */}
             <FormGroup check>
               <Input
-                name="per_hour"
+                name="priceCalculationType"
                 type="radio"
               />
               {' '}
@@ -72,7 +72,7 @@ const CreateAd = () => {
             {/* ======PER SQ MTR====== */}
             <FormGroup check>
               <Input
-                name="per_squared_meter"
+                name="priceCalculationType"
                 type="radio"
               />
               {' '}
@@ -83,7 +83,7 @@ const CreateAd = () => {
             {/* ======FIXED====== */}
             <FormGroup check>
               <Input
-                name="fixed"
+                name="priceCalculationType"
                 type="radio"
               />
               {' '}
@@ -94,7 +94,7 @@ const CreateAd = () => {
             {/* ======NEGOTIABLE====== */}
             <FormGroup check>
               <Input
-                name="negotiable"
+                name="priceCalculationType"
                 type="radio"
               />
               {' '}
