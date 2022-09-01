@@ -11,6 +11,18 @@ const initialstate = {
 const UserLogin = () => {
   const [user, setUser] = useState(initialstate);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    fetch('http://localhost:8000/testw', { //=====CHANGE URL=====//
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(user)
+    })
+    .then((res) => console.log(res))
+    .catch(err => console.log(err))
+  }
+
   const handleChange = (e) => {
     const {name, value} = e.target;
     setUser({...user, [name]: value});
@@ -21,7 +33,7 @@ const UserLogin = () => {
     <Row>
       <Col lg={{ span: 6, offset: 3 }}>
         <h4>Log in</h4>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <FormGroup>
             <Label for="email">
               Email
