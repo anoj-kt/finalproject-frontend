@@ -57,7 +57,7 @@ const CreateAd = () => {
             />
           </FormGroup>
           {/* ======PRICE CALC TYPE (RADIO)====== */}
-          <FormGroup tag="fieldset">
+          <FormGroup tag="fieldset" className="createad__radio">
             {/* ======PER HOUR====== */}
             <FormGroup check>
               <Input

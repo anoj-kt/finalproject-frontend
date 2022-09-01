@@ -289,10 +289,18 @@ a {
 
 
 /* =================USER LOGIN (Login component uses classes as well)================= */
-
 @media screen and (min-height: 42.5em) {
   .login__container {
     height: calc(100vh - (162.44px + 182.01px));
+  }
+}
+
+/* =================CREATE AD================= */
+@media screen and (min-width: 42.5em) {
+  .createad__radio  {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 }
 
