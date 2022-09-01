@@ -7,6 +7,7 @@ import UserSignup from './components/UserSignup';
 import Footer from './components/Footer';
 import ErrorPage from './components/ErrorPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProvidedServiceList from "./components/ProvidedServiceList";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
             <Route exact path="/" element={<Home />}></Route>
             <Route path="/auth/login" element={<UserLogin />}></Route>
             <Route path="/auth/signup" element={<UserSignup />}></Route>
-            <Route path="/404" element={<ErrorPage />}></Route>                         
+            <Route path="/404" element={<ErrorPage />}></Route> 
+            <Route path="/user/:userId/services/provided" element={<ProvidedServiceList />}></Route>                        
           </Routes>
         </div>
       <Footer />
