@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
 
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+
 const CreateAd = () => {
   return (
     <Container className="form__container">
@@ -99,6 +102,58 @@ const CreateAd = () => {
                 Negotiable
               </Label>
             </FormGroup>
+          </FormGroup>
+          {/* ======IMAGES====== */}
+          {/* ======ADDRESS.STREET====== */}
+          <Label>
+            Address
+          </Label>
+          <FormGroup>
+            <Input
+              name="street"
+              placeholder="Street and housenumber"
+              type="text"
+              required
+            />
+          </FormGroup>
+            {/* ======ADDRESS.POSTALCODE====== */}
+          <FormGroup>
+            <Input
+              name="postalCode"
+              placeholder="Postal Code"
+              type="text"
+              required
+            />
+          </FormGroup>
+            {/* ======ADDRESS.CITY====== */}
+          <FormGroup>
+            <Input
+              name="city"
+              placeholder="City"
+              type="text"
+              required
+            />
+          </FormGroup>
+          {/* ======ADDRESS.COUNTRY====== */}
+          <FormGroup>
+            <Input
+              name="country"
+              placeholder="Country"
+              type="text"
+              required
+            />
+          </FormGroup>
+          {/* ======MOBILE NUMBER====== */}
+          <FormGroup>
+            <Label for="telephone">
+              Mobile number
+            </Label>
+            <PhoneInput
+              id="telephone"
+              name="telephone"
+              country={'de'}
+              // onChange={(phone, country, e, formattedvalue )=> setNewUser({...newUser, telephone: formattedvalue})}
+            />
           </FormGroup>
           {/* ======SUBMIT BUTTON====== */}
           <div className="form__submit">
