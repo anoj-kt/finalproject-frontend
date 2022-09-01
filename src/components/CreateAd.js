@@ -6,11 +6,27 @@ import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
+const initialstate = {
+  title: "",
+  description: "",
+  price: "",
+  priceCalculationType: "",
+  address: {
+    street: "",
+    postalCode: "",
+    city:"",
+    country:""
+  },
+  telephone: ""
+}
+
 const CreateAd = () => {
+  const [newAd, setNewAd] = useState(initialstate);
+
   return (
     <Container className="form__container">
       <Row className="justify-content-center">
-        <Col lg={{ span: 6}}>
+        <Col xl={{ span: 6}} >
         <h4>Create your advertisement</h4>
         <Form>
           {/* ======TITLE====== */}
