@@ -114,6 +114,7 @@ a {
 .nav__brand {
   display: flex;
   align-items: flex-end;
+  text-decoration: none;
 }
 
 .nav__logo {
@@ -385,10 +386,29 @@ a {
   transition: ease-in-out 0.25s;
 }
 
-  /* =================FOOTER================= */
+/* =================FOOTER================= */
   .footer__container {
     background-color: var(--main-black);
     color: white;
+
+/* =================USER LOGIN (Login component uses classes as well)================= */
+
+@media screen and (min-height: 42.5em) {
+  .login__container {
+    height: calc(100vh - (162.44px + 182.01px));
+  }
+}
+
+.login__signup-link {
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+/* =================FOOTER================= */
+.footer__container {
+  background-color: var(--main-black);
+  color: white;
+
 }
 
 .footer__COL {
