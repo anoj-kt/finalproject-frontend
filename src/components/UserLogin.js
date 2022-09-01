@@ -30,8 +30,8 @@ const UserLogin = () => {
 
   return (
     <Container className="signup__container login__container">
-    <Row>
-      <Col lg={{ span: 6, offset: 3 }}>
+    <Row className="justify-content-center">
+      <Col lg={{ span: 5}}>
         <h4>Log in</h4>
         <Form onSubmit={handleSubmit}>
           <FormGroup>
@@ -71,10 +71,9 @@ const UserLogin = () => {
             </button>
           </div>
         </Form>
-        <div>
-          Dont't have an account yet?
-          <Link to="/auth/signup">Sign up here!</Link>
-        </div>
+        <Link to="/auth/signup" style={{textDecoration: 'none'}}>
+        <p className="login__signup-link">Dont't have an account yet? Sign up here!</p>
+        </Link>
       </Col>
     </Row>
   </Container>

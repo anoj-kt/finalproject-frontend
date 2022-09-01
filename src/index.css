@@ -286,6 +286,11 @@ a {
   overflow: auto;
 }
 
+.login__signup-link {
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
 /* =================FOOTER================= */
 .footer__container {
   background-color: var(--main-black);

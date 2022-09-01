@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
+import { Link } from 'react-router-dom';
+
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
@@ -73,8 +75,8 @@ const UserSignup = () => {
 
   return (
     <Container className="signup__container">
-      <Row>
-        <Col lg={{ span: 6, offset: 3 }}>
+      <Row className="justify-content-center">
+        <Col lg={{ span: 5}}>
           <h4>Sign Up</h4>
           <Form onSubmit={handleSubmit}>
             <FormGroup>
@@ -201,6 +203,9 @@ const UserSignup = () => {
                 Create Account
               </button>
             </div>
+            <Link to="/auth/signup" style={{textDecoration: 'none'}}>
+              <p className="login__signup-link">Already have an account? Login here!</p>
+             </Link>
           </Form>
         </Col>
       </Row>
