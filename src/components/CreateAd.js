@@ -5,7 +5,7 @@ import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
 
 const CreateAd = () => {
   return (
-    <Container>
+    <Container className="form__container">
       <Row className="justify-content-center">
         <Col lg={{ span: 6}}>
         <h4>Create your advertisement</h4>
@@ -23,26 +23,35 @@ const CreateAd = () => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="password">
-              Password
+            <Label for="description">
+              Description
             </Label>
             <Input
-              id="password"
-              name="password"
+              id="description"
+              name="description"
               placeholder=""
-              type="password"
+              type="textarea"
+              required
+              style={{ 
+                height: '15rem',
+                resize: 'none' 
+              }}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="description">
+              Price
+            </Label>
+            <Input
+              id="description"
+              name="description"
+              placeholder=""
+              type="number"
               required
             />
-            <FormFeedback invalid>
-              Passwords need to match!
-            </FormFeedback>
           </FormGroup>
-          <div className="signup__submit">
-            <button
-            className="signup__submit-btn button"
-            >
-              Create Ad
-            </button>
+          <div className="form__submit">
+            <button className="form__submit-btn button">Create Ad</button>
           </div>
         </Form>
         </Col>
