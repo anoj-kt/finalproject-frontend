@@ -58,7 +58,7 @@ const CreateAd = () => {
             {/* ======PER HOUR====== */}
             <FormGroup check>
               <Input
-                name="radio1"
+                name="per_hour"
                 type="radio"
               />
               {' '}
@@ -69,12 +69,34 @@ const CreateAd = () => {
             {/* ======PER SQ MTR====== */}
             <FormGroup check>
               <Input
-                name="radio1"
+                name="per_squared_meter"
                 type="radio"
               />
               {' '}
               <Label check>
                 Per square meter
+              </Label>
+            </FormGroup>
+            {/* ======FIXED====== */}
+            <FormGroup check>
+              <Input
+                name="fixed"
+                type="radio"
+              />
+              {' '}
+              <Label check>
+                Fixed
+              </Label>
+            </FormGroup>
+            {/* ======NEGOTIABLE====== */}
+            <FormGroup check>
+              <Input
+                name="negotiable"
+                type="radio"
+              />
+              {' '}
+              <Label check>
+                Negotiable
               </Label>
             </FormGroup>
           </FormGroup>
