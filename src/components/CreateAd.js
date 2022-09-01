@@ -11,14 +11,14 @@ const CreateAd = () => {
         <h4>Create your advertisement</h4>
         <Form>
           <FormGroup>
-            <Label for="email">
-              Email
+            <Label for="title">
+              Title
             </Label>
             <Input
-              id="email"
-              name="email"
+              id="title"
+              name="title"
               placeholder=""
-              type="email"
+              type="text"
               required
             />
           </FormGroup>

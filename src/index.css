@@ -253,32 +253,40 @@ a {
   text-align: right;
 }
 
-/* =================USER SIGN UP================= */
-.signup__container {
+/* =================GENERAL STYLING ON ALL FORMS================= */
+.form__container {
   padding: 2rem 0;
 }
 
-.signup__container h4{
+.form__container h4{
   padding: 0.5rem 0 1rem;
   text-align: center;
   font-weight: var(--font-semi-bold);
 }
 
-.signup__submit {
+.form__submit {
   width: 100%;
   text-align: center;
 }
 
-.signup__submit-btn {
+.form__submit-btn {
   background-color: var(--main-yellow);
   padding-left: 3rem;
   padding-right: 3rem;
   margin-top: 1rem;
 }
 
-.signup__submit-btn:hover {
+.form__submit-btn:hover {
   background-color: var(--main-yellow-alt);
 }
+
+.form__link {
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+/* =================USER SIGN UP================= */
+
 
 /* =================USER LOGIN (Login component uses classes as well)================= */
 
@@ -286,11 +294,6 @@ a {
   .login__container {
     height: calc(100vh - (162.44px + 182.01px));
   }
-}
-
-.login__signup-link {
-  text-align: center;
-  margin: 2rem 0 0;
 }
 
 /* =================FOOTER================= */
