@@ -10,6 +10,7 @@ const CreateAd = () => {
         <Col lg={{ span: 6}}>
         <h4>Create your advertisement</h4>
         <Form>
+          {/* ======TITLE====== */}
           <FormGroup>
             <Label for="title">
               Title
@@ -22,6 +23,7 @@ const CreateAd = () => {
               required
             />
           </FormGroup>
+          {/* ======DESCRIPTION====== */}
           <FormGroup>
             <Label for="description">
               Description
@@ -38,6 +40,7 @@ const CreateAd = () => {
               }}
             />
           </FormGroup>
+          {/* ======PRICE====== */}
           <FormGroup>
             <Label for="description">
               Price
@@ -50,6 +53,32 @@ const CreateAd = () => {
               required
             />
           </FormGroup>
+          {/* ======PRICE CALC TYPE (RADIO)====== */}
+          <FormGroup tag="fieldset">
+            {/* ======PER HOUR====== */}
+            <FormGroup check>
+              <Input
+                name="radio1"
+                type="radio"
+              />
+              {' '}
+              <Label check>
+                Per hour
+              </Label>
+            </FormGroup>
+            {/* ======PER SQ MTR====== */}
+            <FormGroup check>
+              <Input
+                name="radio1"
+                type="radio"
+              />
+              {' '}
+              <Label check>
+                Per square meter
+              </Label>
+            </FormGroup>
+          </FormGroup>
+          {/* ======SUBMIT BUTTON====== */}
           <div className="form__submit">
             <button className="form__submit-btn button">Create Ad</button>
           </div>
