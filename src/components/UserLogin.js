@@ -11,6 +11,11 @@ const initialstate = {
 const UserLogin = () => {
   const [user, setUser] = useState(initialstate);
 
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setUser({...user, [name]: value});
+  }
+
   return (
     <Container className="signup__container login__container">
     <Row>
@@ -27,6 +32,7 @@ const UserLogin = () => {
               placeholder=""
               type="email"
               required
+              onChange={handleChange}
             />
           </FormGroup>
           <FormGroup>
@@ -39,6 +45,7 @@ const UserLogin = () => {
               placeholder=""
               type="password"
               required
+              onChange={handleChange}
             />
             <FormFeedback invalid>
               Passwords need to match!

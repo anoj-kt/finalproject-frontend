@@ -35,7 +35,7 @@ const UserSignup = () => {
       return
     } 
 
-    fetch('http://localhost:8000/testw', {
+    fetch('http://localhost:8000/testw', { //=====CHANGE URL=====//
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(newUser)
@@ -64,9 +64,9 @@ const UserSignup = () => {
       return
     }
 
-    // if(name === 'confirmPassword') {
-    //   setPasswordError({matchPasswords: newUser.password === value})
-    // }
+    if(name === 'confirmPassword') {
+      setPasswordError({matchPasswords: true})
+    }
 
     setNewUser({...newUser, [name]: value});
   }
@@ -197,7 +197,6 @@ const UserSignup = () => {
             <div className="signup__submit">
               <button
               className="signup__submit-btn button"
-
               >
                 Create Account
               </button>

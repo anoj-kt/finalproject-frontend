@@ -282,7 +282,7 @@ a {
 
 /* =================USER LOGIN (Login component uses classes as well)================= */
 .login__container {
-  /* height: calc(100vh - (162.44px + 182.01px)); */
+  height: calc(100vh - (162.44px + 182.01px));
   overflow: auto;
 }
 
