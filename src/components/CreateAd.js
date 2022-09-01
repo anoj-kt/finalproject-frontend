@@ -23,6 +23,19 @@ const initialstate = {
 const CreateAd = () => {
   const [newAd, setNewAd] = useState(initialstate);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(newAd)
+
+    // fetch('http://localhost:8000/testw', { //=====CHANGE URL=====//
+    //   method: 'POST',
+    //   headers: {'Content-Type': 'application/json'},
+    //   body: JSON.stringify(newUser)
+    // })
+    // .then((res) => console.log(res))
+    // .catch(err => console.log(err))
+  }
+
   const handleChange = (e) => {
     const {name, value} = e.target;
 
@@ -45,7 +58,7 @@ const CreateAd = () => {
       <Row className="justify-content-center">
         <Col xl={{ span: 6}} >
         <h4>Create your advertisement</h4>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           {/* ======TITLE====== */}
           <FormGroup>
             <Label for="title">
@@ -168,6 +181,7 @@ const CreateAd = () => {
               placeholder="Street and housenumber"
               type="text"
               required
+              onChange={handleChange}
             />
           </FormGroup>
             {/* ======ADDRESS.POSTALCODE====== */}
@@ -177,6 +191,7 @@ const CreateAd = () => {
               placeholder="Postal Code"
               type="text"
               required
+              onChange={handleChange}
             />
           </FormGroup>
             {/* ======ADDRESS.CITY====== */}
@@ -186,6 +201,7 @@ const CreateAd = () => {
               placeholder="City"
               type="text"
               required
+              onChange={handleChange}
             />
           </FormGroup>
           {/* ======ADDRESS.COUNTRY====== */}
@@ -195,6 +211,7 @@ const CreateAd = () => {
               placeholder="Country"
               type="text"
               required
+              onChange={handleChange}
             />
           </FormGroup>
           {/* ======SUBMIT BUTTON====== */}
