@@ -104,6 +104,18 @@ const CreateAd = () => {
             </FormGroup>
           </FormGroup>
           {/* ======IMAGES====== */}
+          {/* ======MOBILE NUMBER====== */}
+          <FormGroup>
+            <Label for="telephone">
+              Mobile number
+            </Label>
+            <PhoneInput
+              id="telephone"
+              name="telephone"
+              country={'de'}
+              // onChange={(phone, country, e, formattedvalue )=> setNewUser({...newUser, telephone: formattedvalue})}
+            />
+          </FormGroup>
           {/* ======ADDRESS.STREET====== */}
           <Label>
             Address
@@ -141,18 +153,6 @@ const CreateAd = () => {
               placeholder="Country"
               type="text"
               required
-            />
-          </FormGroup>
-          {/* ======MOBILE NUMBER====== */}
-          <FormGroup>
-            <Label for="telephone">
-              Mobile number
-            </Label>
-            <PhoneInput
-              id="telephone"
-              name="telephone"
-              country={'de'}
-              // onChange={(phone, country, e, formattedvalue )=> setNewUser({...newUser, telephone: formattedvalue})}
             />
           </FormGroup>
           {/* ======SUBMIT BUTTON====== */}
