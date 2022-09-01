@@ -10,6 +10,7 @@ const initialstate = {
   title: "",
   description: "",
   price: "",
+  currency: "Euro",
   priceCalculationType: "",
   address: {
     street: "",
