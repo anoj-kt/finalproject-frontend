@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
+import {useDropzone} from 'react-dropzone';
 
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
@@ -23,6 +24,39 @@ const initialstate = {
 
 const CreateAd = () => {
   const [newAd, setNewAd] = useState(initialstate);
+  const [files, setFiles] = useState([]);
+  const [imageError, setNewImageError] = useState();
+
+  const {getRootProps, getInputProps} = useDropzone({
+    accept: {
+      'image/*': ['.jpeg', '.jpg', '.png'],
+    },
+    maxFiles:4,
+    onDrop: (acceptedFiles) => {
+        if((files.length + acceptedFiles.length)>4) {
+          console.log('no')
+          return
+        }
+        const accFiles = acceptedFiles.map(file => Object.assign(file, {
+          preview: URL.createObjectURL(file)
+          }))
+        console.log(acceptedFiles)
+        setFiles([...files, ...accFiles]);
+      },
+  });
+
+  const thumbs = files?.map(file => (
+    <div style={{width:100}} key={file.name}>
+      <div style={{width:100}}>
+        <img
+          src={file.preview}
+          style={{width:100}}
+          // Revoke data uri after image is loaded
+          onLoad={() => { URL.revokeObjectURL(file.preview) }}
+        />
+      </div>
+    </div>
+  ));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -53,7 +87,7 @@ const CreateAd = () => {
 
     setNewAd({...newAd, [name]: value});
   }
-
+  console.log(files)
   return (
     <Container className="form__container">
       <Row className="justify-content-center">
@@ -160,6 +194,15 @@ const CreateAd = () => {
             </FormGroup>
           </FormGroup>
           {/* ======IMAGES====== */}
+          <section style={{border: '2px solid green'}} className="container">
+            <div {...getRootProps({className: 'dropzone'})}>
+              <input {...getInputProps()} />
+              <p>Drag 'n' drop some files here, or click to select files</p>
+            </div>
+            <aside style={{width: 500}}>
+              {thumbs}
+            </aside>
+          </section>
           {/* ======MOBILE NUMBER====== */}
           <FormGroup>
             <Label for="telephone">
