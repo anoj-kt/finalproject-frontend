@@ -13,6 +13,7 @@
     --main-yellow-alt: hsl(var(--hue-color), 57%, 53%); 
     --main-yellow-lighter: hsl(var(--hue-color), 92%, 85%); 
     --main-black: hsl(0, 0%, 17%);
+    --main-grey: hsla(0, 0%, 2%, 0.3);
     --main-green: hsl(130, 55%, 45%);
     --main-green-alt: hsl(130, 75%, 35%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
@@ -300,6 +301,21 @@ a {
   width: 7rem;
   height: 7rem;
   object-fit: cover;
+}
+
+.createad__dropzone {
+  height: 15rem;
+}
+
+.createad__input {
+  padding: 1rem;
+  border: 2px dashed var(--main-grey);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.createad__input p {
+  color: var(--main-grey);
 }
 
 @media screen and (min-width: 42.5em) {

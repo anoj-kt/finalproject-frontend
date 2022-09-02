@@ -191,15 +191,17 @@ const CreateAd = () => {
             </FormGroup>
           </FormGroup>
           {/* ======IMAGES====== */}
-          <section style={{border: '2px solid green'}} className="container">
-            <div {...getRootProps({className: 'dropzone'})}>
-              <input {...getInputProps()} />
-              <p>Drag 'n' drop some files here, or click to select files</p>
+          <div className="createad__dropzone">
+            <div {...getRootProps({className: 'createad__input'})}>
+              <input {...getInputProps()}/>
+              <p>Drag & drop some files here, or click to select files</p>
+              <p><i>(You can drop or select a maximum of 4 files only)</i></p>
             </div>
-            <aside style={{width: 500}}>
+            <div>
               {thumbs}
-            </aside>
-          </section>
+            </div>
+          </div>
+            
           {/* ======MOBILE NUMBER====== */}
           <FormGroup>
             <Label for="telephone">
