@@ -40,7 +40,6 @@ const CreateAd = () => {
         const accFiles = acceptedFiles.map(file => Object.assign(file, {
           preview: URL.createObjectURL(file)
           }))
-
         setFiles([...files, ...accFiles]);
       },
   });
@@ -62,16 +61,13 @@ const CreateAd = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
-    console.log(newAd)
-
-    // fetch('http://localhost:8000/testw', { //=====CHANGE URL=====//
-    //   method: 'POST',
-    //   headers: {'Content-Type': 'application/json'},
-    //   body: JSON.stringify(newUser)
-    // })
-    // .then((res) => console.log(res))
-    // .catch(err => console.log(err))
+    fetch('http://localhost:8000/test', { //=====CHANGE URL=====//
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(newAd)
+    })
+    .then((res) => console.log(res))
+    .catch(err => console.log(err))
   }
 
   const handleChange = (e) => {
