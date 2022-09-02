@@ -108,6 +108,8 @@ a {
   position: sticky;
   top: 0;
   z-index: 1;
+  border-bottom: 10px solid var(--main-yellow);
+  /* border-radius: 0 0 10px 10px; */
 }
 
 /* -----nav logo and brandname----- */
@@ -215,6 +217,8 @@ a {
 .nav__btn-search:hover {
   background-color: var(--main-green-alt);
 }
+
+
 
 /* =================HOME================= */
 .home__container {
@@ -390,6 +394,7 @@ a {
   .footer__container {
     background-color: var(--main-black);
     color: white;
+    border-top: 10px solid var(--main-yellow);
   }
 
 /* =================USER LOGIN (Login component uses classes as well)================= */
