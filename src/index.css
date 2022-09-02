@@ -568,7 +568,7 @@ a {
   opacity: 70%;
  }
 
- /* =================REQUST DETAILS================= */
+ /* =================REQUEST DETAILS================= */
 
  .requestdetails__container {
   height: calc(100vh - 162.44px);
@@ -582,6 +582,19 @@ a {
   font-weight:900;
 }
 
-.requestdetails__content p {
+.lead {
   padding-top: 2rem;
+}
+
+.justify-content-start h6 {
+  font-weight:var(--small-font-size);
+}
+
+.requestdetails__chatbox {
+  border: 1px solid gray;
+}
+
+.requestdetails__chatbox p {
+  font-size: 12px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
 }
