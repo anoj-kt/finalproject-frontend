@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
@@ -40,10 +40,14 @@ const CreateAd = () => {
         const accFiles = acceptedFiles.map(file => Object.assign(file, {
           preview: URL.createObjectURL(file)
           }))
-        console.log(acceptedFiles)
+
         setFiles([...files, ...accFiles]);
       },
   });
+
+  useEffect(() => {
+    setNewAd({...newAd, files: files})
+  }, [files])
 
   const thumbs = files?.map(file => (
         <img
@@ -57,6 +61,8 @@ const CreateAd = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+
     console.log(newAd)
 
     // fetch('http://localhost:8000/testw', { //=====CHANGE URL=====//
@@ -84,7 +90,7 @@ const CreateAd = () => {
 
     setNewAd({...newAd, [name]: value});
   }
-  console.log(files)
+
   return (
     <Container className="form__container">
       <Row className="justify-content-center">
@@ -105,6 +111,7 @@ const CreateAd = () => {
               onChange={handleChange}
             />
           </FormGroup>
+
           {/* ======DESCRIPTION====== */}
           <FormGroup>
             <Label for="description">
@@ -123,6 +130,7 @@ const CreateAd = () => {
               onChange={handleChange}
             />
           </FormGroup>
+
           {/* ======PRICE AND PRICE TYPE====== */}
           <FormGroup tag="fieldset" className="createad__radio">
             {/* ======PRICE====== */}
@@ -132,7 +140,7 @@ const CreateAd = () => {
               </Label>
               <Input
                 name="price"
-                type="text"
+                type="number"
                 onChange={handleChange}
               />
               {' '}
@@ -190,6 +198,7 @@ const CreateAd = () => {
               </Label>
             </FormGroup>
           </FormGroup>
+
           {/* ======IMAGES====== */}
           <Label>Images</Label>
           <div className="createad__dropzone">
@@ -201,8 +210,8 @@ const CreateAd = () => {
             <div className="createad__thumbs">
               {thumbs}
             </div>
-          </div>
-            
+          </div>     
+
           {/* ======MOBILE NUMBER====== */}
           <FormGroup>
             <Label for="telephone">
@@ -215,6 +224,7 @@ const CreateAd = () => {
               // onChange={(phone, country, e, formattedvalue )=> setNewUser({...newUser, telephone: formattedvalue})}
             />
           </FormGroup>
+
           {/* ======ADDRESS.STREET====== */}
           <Label>
             Address
@@ -228,6 +238,7 @@ const CreateAd = () => {
               onChange={handleChange}
             />
           </FormGroup>
+
             {/* ======ADDRESS.POSTALCODE====== */}
           <FormGroup>
             <Input
@@ -238,6 +249,7 @@ const CreateAd = () => {
               onChange={handleChange}
             />
           </FormGroup>
+
             {/* ======ADDRESS.CITY====== */}
           <FormGroup>
             <Input
@@ -248,6 +260,7 @@ const CreateAd = () => {
               onChange={handleChange}
             />
           </FormGroup>
+
           {/* ======ADDRESS.COUNTRY====== */}
           <FormGroup>
             <Input
@@ -258,6 +271,7 @@ const CreateAd = () => {
               onChange={handleChange}
             />
           </FormGroup>
+
           {/* ======SUBMIT BUTTON====== */}
           <div className="form__submit">
             <button className="form__submit-btn button">Create Ad</button>
