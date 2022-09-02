@@ -15,8 +15,7 @@ const ProvidedServiceList = () => {
           {/* <i className="uil uil-plus icon"></i> */}
           <h4>+ Add a new Service</h4>
         </Link>
-      </div>
-      
+      </div>    
       <div className='pservice__list'>
       <div className='pservices__services'>
         <p>Web-Design</p>
@@ -37,13 +36,8 @@ const ProvidedServiceList = () => {
       <div className='pservices__activate'>
         <p className='phover'>Activate</p>
       </div>
-        
       </div>
       </div>
-      
-
-      
-
     </Container>
   )
 }
