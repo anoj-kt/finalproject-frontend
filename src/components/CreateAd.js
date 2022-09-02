@@ -46,16 +46,13 @@ const CreateAd = () => {
   });
 
   const thumbs = files?.map(file => (
-    <div style={{width:100}} key={file.name}>
-      <div style={{width:100}}>
         <img
+          key={file.name}
           src={file.preview}
-          style={{width:100}}
+          className="createad__thumbnail"
           // Revoke data uri after image is loaded
           onLoad={() => { URL.revokeObjectURL(file.preview) }}
         />
-      </div>
-    </div>
   ));
 
   const handleSubmit = (e) => {

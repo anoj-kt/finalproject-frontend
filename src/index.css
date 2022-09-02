@@ -296,6 +296,12 @@ a {
 }
 
 /* =================CREATE AD================= */
+.createad__thumbnail{
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+}
+
 @media screen and (min-width: 42.5em) {
   .createad__radio  {
     display: flex;
