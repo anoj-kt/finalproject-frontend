@@ -437,8 +437,8 @@ a {
 }
 
 .pservice__create {
+  width: 260px;
   padding-top: 1rem;
-
 }
 
 .pservice__create:hover {

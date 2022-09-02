@@ -12,16 +12,16 @@ const ProvidedServiceList = () => {
       </div>
       <div className='pservice__create'>
         <Link to="/createad" style={{textDecoration: 'none'}}>
-          {/* <i className="uil uil-plus icon"></i> */}
           <h4>+ Add a new Service</h4>
         </Link>
       </div>    
       <div className='pservice__list'>
       <div className='pservices__services'>
         <p>Web-Design</p>
-          <Link to="user/:userId/services/provided/:serviceId/requests/"style={{textDecoration: 'none', color: 'var(--main)'}}>
+        <Link to="user/:userId/services/provided/:serviceId/requests/"style={{textDecoration: 'none', color: 'var(--main)'}}>
             <p className='phover'> 1 new Request</p>
-          </Link>
+        </Link>
+          
       </div>
       <div className='pservices__moreinfo'>
         <Link to="/user/:userId/provided/:serviceId/details"style={{textDecoration: 'none', color: 'var(--main)'}}>
