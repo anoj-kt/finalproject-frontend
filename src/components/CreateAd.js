@@ -191,13 +191,14 @@ const CreateAd = () => {
             </FormGroup>
           </FormGroup>
           {/* ======IMAGES====== */}
+          <Label>Images</Label>
           <div className="createad__dropzone">
             <div {...getRootProps({className: 'createad__input'})}>
               <input {...getInputProps()}/>
-              <p>Drag & drop some files here, or click to select files</p>
+              <p>Drag & drop some files here, or click here to select files</p>
               <p><i>(You can drop or select a maximum of 4 files only)</i></p>
             </div>
-            <div>
+            <div className="createad__thumbs">
               {thumbs}
             </div>
           </div>

@@ -13,7 +13,8 @@
     --main-yellow-alt: hsl(var(--hue-color), 57%, 53%); 
     --main-yellow-lighter: hsl(var(--hue-color), 92%, 85%); 
     --main-black: hsl(0, 0%, 17%);
-    --main-grey: hsla(0, 0%, 2%, 0.3);
+    --main-grey: hsla(0, 0%, 2%, 0.2);
+    --main-grey-text: hsla(0, 0%, 2%, 0.4);
     --main-green: hsl(130, 55%, 45%);
     --main-green-alt: hsl(130, 75%, 35%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
@@ -297,26 +298,36 @@ a {
 }
 
 /* =================CREATE AD================= */
-.createad__thumbnail{
-  width: 7rem;
-  height: 7rem;
-  object-fit: cover;
-}
-
 .createad__dropzone {
-  height: 15rem;
+  border: 2px dashed var(--main-grey);
+  margin-bottom: 1rem;
 }
 
 .createad__input {
   padding: 1rem;
-  border: 2px dashed var(--main-grey);
   border-radius: 5px;
   text-align: center;
+  cursor: pointer;
 }
 
 .createad__input p {
-  color: var(--main-grey);
+  color: var(--main-grey-text);
 }
+
+.createad__thumbs{
+  display: flex;
+  justify-content: space-around;
+}
+
+.createad__thumbnail{
+  width: 7rem;
+  height: 7rem;
+  margin: 0.25rem 0.25rem;
+  border: 1px solid var(--main-grey);
+  border-radius: 5px;
+  object-fit: cover;
+}
+
 
 @media screen and (min-width: 42.5em) {
   .createad__radio  {
