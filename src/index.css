@@ -423,8 +423,7 @@ a {
 
 .pservice__container {
   /* background-color: var(--main-yellow); */
-  height: calc(100vh - 162.44px);
-  
+  height: calc(100vh - 162.44px); 
 }
 
 .pservice__createad{
@@ -463,7 +462,6 @@ a {
   padding-left:1rem;
   padding-right: 1rem;
   font-weight: var(--font-medium);
-  
 }
 
 .pservices__moreinfo {
@@ -477,10 +475,9 @@ a {
   background: #D9D9D9;
   font-weight: var(--font-medium);
   margin-left: 10px;
-  
 }
 
-.pservices__activate {
+.pservices__edit {
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -491,10 +488,9 @@ a {
   background: #D9D9D9;
   font-weight: var(--font-medium);
   margin-left: 10px;
-  
 }
 
-.pservices__deactivate {
+.pservices__activate {
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -506,4 +502,10 @@ a {
   background: #D9D9D9;
   font-weight: var(--font-medium);
   margin-left: 10px;
+}
+
+.phover:hover {
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  opacity: 50%;
 }

@@ -33,7 +33,9 @@ const ServerLinks = () => {
             <Link to="user/:userId/services/consumed/requests/:requestId">Consumed Service Details</Link>            
 
             {/* Provided Services  */}
-            <Link to="/user/:userId/services/provided">Edit Confirm Advertisement</Link>
+            <Link to="/user/:userId/services/provided">Provided Service List</Link>
+            <Link to="/user/:userId/provided/:serviceId/details">Provided Service Details</Link>
+
         </div>
     );
 }
