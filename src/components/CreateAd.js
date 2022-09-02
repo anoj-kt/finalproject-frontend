@@ -24,7 +24,7 @@ const initialstate = {
 
 const CreateAd = () => {
   const [newAd, setNewAd] = useState(initialstate);
-  const [files, setFiles] = useState([]);
+  const [images, setImages] = useState([]);
   const [imageError, setNewImageError] = useState();
 
   const {getRootProps, getInputProps} = useDropzone({
@@ -33,28 +33,30 @@ const CreateAd = () => {
     },
     maxFiles:4,
     onDrop: (acceptedFiles) => {
-        if((files.length + acceptedFiles.length)>4) {
-          console.log('no')
+        if((images.length + acceptedFiles.length)>4) {
+          console.log('Max 4 images')
           return
         }
-        const accFiles = acceptedFiles.map(file => Object.assign(file, {
-          preview: URL.createObjectURL(file)
-          }))
-        setFiles([...files, ...accFiles]);
+
+        acceptedFiles.map((file, index) => {
+          const reader = new FileReader()
+          reader.onload = () => {
+            setImages([...images, reader.result])
+          }
+          reader.readAsDataURL(file)
+        })
       },
   });
 
   useEffect(() => {
-    setNewAd({...newAd, files: files})
-  }, [files])
+    setNewAd({...newAd, images})
+  }, [images])
 
-  const thumbs = files?.map(file => (
+  const thumbs = images?.map((file, index) => (
         <img
-          key={file.name}
-          src={file.preview}
+          key={index}
+          src={file}
           className="createad__thumbnail"
-          // Revoke data uri after image is loaded
-          onLoad={() => { URL.revokeObjectURL(file.preview) }}
         />
   ));
 
