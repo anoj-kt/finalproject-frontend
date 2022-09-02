@@ -18,7 +18,7 @@ const ProvidedServiceList = () => {
       <div className='pservice__list'>
         <div className='pservices__services'>
           <p>Web-Design</p>
-        <Link to="user/:userId/services/provided/:serviceId/requests/"style={{textDecoration: 'none', color: 'var(--main)'}}>
+        <Link to="/user/:userId/services/provided/:serviceId/requests"style={{textDecoration: 'none', color: 'var(--main)'}}>
             <p className='phover'> 1 new Request</p>
         </Link>     
       </div>
