@@ -13,6 +13,8 @@
     --main-yellow-alt: hsl(var(--hue-color), 57%, 53%); 
     --main-yellow-lighter: hsl(var(--hue-color), 92%, 85%); 
     --main-black: hsl(0, 0%, 17%);
+    --main-grey: hsla(0, 0%, 2%, 0.2);
+    --main-grey-text: hsla(0, 0%, 2%, 0.4);
     --main-green: hsl(130, 55%, 45%);
     --main-green-alt: hsl(130, 75%, 35%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
@@ -253,33 +255,39 @@ a {
   text-align: right;
 }
 
-/* =================USER SIGN UP================= */
-.signup__container {
+/* =================GENERAL STYLING ON ALL FORMS================= */
+.form__container {
   padding: 2rem 0;
 }
 
-.signup__container h4{
+.form__container h4{
   padding: 0.5rem 0 1rem;
   text-align: center;
   font-weight: var(--font-semi-bold);
 }
 
-.signup__submit {
+.form__submit {
   width: 100%;
   text-align: center;
 }
 
-.signup__submit-btn {
+.form__submit-btn {
   background-color: var(--main-yellow);
   padding-left: 3rem;
   padding-right: 3rem;
   margin-top: 1rem;
 }
 
-.signup__submit-btn:hover {
+.form__submit-btn:hover {
   background-color: var(--main-yellow-alt);
 }
 
+.form__link {
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+/* =================USER SIGN UP================= */
 
 /* =================404================= */
 
@@ -394,15 +402,52 @@ a {
 
 /* =================USER LOGIN (Login component uses classes as well)================= */
 
+
+/* =================USER LOGIN (Login component uses classes as well)================= */
 @media screen and (min-height: 42.5em) {
   .login__container {
     height: calc(100vh - (162.44px + 182.01px));
   }
 }
 
-.login__signup-link {
+/* =================CREATE AD================= */
+.createad__dropzone {
+  border: 2px dashed var(--main-grey);
+  margin-bottom: 1rem;
+}
+
+.createad__input {
+  padding: 1rem;
+  border-radius: 5px;
   text-align: center;
-  margin: 2rem 0 0;
+  cursor: pointer;
+}
+
+.createad__input p {
+  color: var(--main-grey-text);
+}
+
+.createad__thumbs{
+  display: flex;
+  justify-content: space-around;
+}
+
+.createad__thumbnail{
+  width: 7rem;
+  height: 7rem;
+  margin: 0.25rem 0.25rem;
+  border: 1px solid var(--main-grey);
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
+@media screen and (min-width: 42.5em) {
+  .createad__radio  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 /* =================FOOTER================= */

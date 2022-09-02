@@ -74,7 +74,7 @@ const UserSignup = () => {
   }
 
   return (
-    <Container className="signup__container">
+    <Container className="form__container">
       <Row className="justify-content-center">
         <Col lg={{ span: 5}}>
           <h4>Sign Up</h4>
@@ -196,15 +196,15 @@ const UserSignup = () => {
                 onChange={handleChange}
               />
             </FormGroup>
-            <div className="signup__submit">
+            <div className="form__submit">
               <button
-              className="signup__submit-btn button"
+              className="form__submit-btn button"
               >
                 Create Account
               </button>
             </div>
             <Link to="/auth/signup" style={{textDecoration: 'none'}}>
-              <p className="login__signup-link">Already have an account? Login here!</p>
+              <p className="form__link">Already have an account? Login here!</p>
              </Link>
           </Form>
         </Col>

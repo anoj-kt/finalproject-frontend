@@ -9,11 +9,13 @@ const Header = () => {
     <Container fluid className="nav__container">
     <Row>
       <Col xs={12} sm={6} className="nav__brand">
-       <img src={logo} alt="logo" className="nav__logo" />
-        <div className="nav__logo-title">
-          <h1>app-name</h1>
-          <p>affordable, fast, reliable, and local</p>
-        </div>
+        <Link to="/" className="nav__brand">
+          <img src={logo} alt="logo" className="nav__logo" />
+          <div className="nav__logo-title">
+            <h1>app-name</h1>
+            <p>affordable, fast, reliable, and local</p>
+          </div>
+        </Link>
       </Col>
       <Col className="nav__btns">
         <div>
@@ -23,10 +25,12 @@ const Header = () => {
           <Link to="/auth/login">
             <button className="button nav__btn-login">Log in</button>
           </Link>
+          <Link to="/user/:userId/services/provided/new" style={{textDecoration: 'none'}}>
           <div className="nav__btn-createad">
             <i className="uil uil-plus icon"></i>
             <p>Create your advertisement</p>
           </div>
+          </Link>
         </div>
       </Col>
     </Row>
