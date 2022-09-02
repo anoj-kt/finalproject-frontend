@@ -424,7 +424,6 @@ a {
 .pservice__container {
   /* background-color: var(--main-yellow); */
   height: calc(100vh - 344.39px);
-  
 }
 
 .pservice__createad{
@@ -448,7 +447,6 @@ a {
 
 .pservice__list {
   display: flex;
-  
 }
 
 .pservices__services {
@@ -510,3 +508,57 @@ a {
   transition: ease-in-out 0.2s;
   opacity: 50%;
 }
+
+
+/* =================REQUST LIST FOR PROVIDED SERVICES================= */
+
+.requestd_container {
+  height: calc(100vh - 162.44px);
+}
+
+.requestd__content {
+  padding: 5.5rem 0 0 2rem;
+}
+
+.requestd__content h2 {
+  font-weight:900;
+}
+
+.requestd__content p {
+  padding-top: 2rem;
+}
+
+.requestd__flex {
+  display: flex;
+}
+
+.requestd__status {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 50px;
+  width: 600px;
+  border: 0px solid;
+  background: #D9D9D9;
+  border-radius: 15px;
+  padding-left:1rem;
+  padding-right: 1rem;
+  font-weight: var(--font-medium);
+}
+
+.requestd__moreinfo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50px;
+  width: 100px;
+  border: 0px solid;
+  border-radius: 15px;
+  background: #D9D9D9;
+  font-weight: var(--font-medium);
+  margin-left: 10px;
+ }
+
+ .requestp__hover:hover {
+  opacity: 70%;
+ }
