@@ -8,15 +8,12 @@ const Header = () => {
   return (
     <Container fluid className="nav__container">
     <Row>
-      
       <Col xs={12} sm={6} className="nav__brand">
-        <Link to="/" className="nav__brand">
-          <img src={logo} alt="logo" className="nav__logo" />
-          <div className="nav__logo-title">
-            <h1>helpmarket</h1>
-            <p>affordable, fast, reliable, and local</p>
-          </div>
-        </Link>
+       <img src={logo} alt="logo" className="nav__logo" />
+        <div className="nav__logo-title">
+          <h1>app-name</h1>
+          <p>affordable, fast, reliable, and local</p>
+        </div>
       </Col>
       <Col className="nav__btns">
         <div>
@@ -40,11 +37,11 @@ const Header = () => {
           <form className="nav__search" action="">
             <div className="nav__search-input">
               <i class="uil uil-question-circle icon"></i>
-              <input type="text" name="" placeholder="What do you need?"/>
+              <input type="text" name="" placeholder="What are you looking for?"/>
             </div>
             <div className="nav__search-location">
               <i class="uil uil-map-marker icon"></i>
-              <input type="text" name="" placeholder="Where are you?"/>
+              <input type="text" name="" placeholder="Where ?"/>
             </div>
             <button className="button nav__btn-search"><i class="uil uil-search icon-white"></i><span>Search</span></button>
           </form>
