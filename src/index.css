@@ -572,7 +572,8 @@ a {
  /* =================REQUEST DETAILS================= */
 
  .requestdetails__container {
-  height: calc(100vh - 162.44px);
+  /* height: 100vh; */
+  /* height: calc(100vh - 162.44px); */
  }
 
  .requestdetails__content {
@@ -615,9 +616,26 @@ a {
 }
 
 #replytext {
-  width: 1289px;
   height: 40px;
-  margin-top: 1rem;
   padding: 0.5rem;
+  width: max-content;
   
+}
+
+#replytextinput {
+  margin-top: 2rem;
+  width: 86rem;
+  height: 2rem;
+  padding-left: 0.2rem;
+
+}
+
+.requestd__btns {
+  margin-top: 3rem;
+  margin-bottom: 5.5rem;
+}
+
+.requestd__btns button {
+  font-weight: var(--font-medium);
+  margin-right: 2rem;
 }

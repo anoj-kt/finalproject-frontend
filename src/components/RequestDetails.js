@@ -48,10 +48,16 @@ const requestDetails = () => {
                         </div>
                     </Row>
                 </Col>
-                    <div>
-                    <input id="replytext" type="text" placeholder='Write your reply'/>
+                <Col md={12}>
+                    <div className='replytext'>
+                        <input type="text" id="replytextinput" placeholder="Write your reply" />
+                        {/* <i class="bi bi-send"></i> */}
                     </div>
-                
+                    <div className='requestd__btns'>  
+                        <button type="button" class="btn btn-success">Approve Request</button>
+                        <button type="button" class="btn btn-danger">Reject Request</button>
+                    </div> 
+                    </Col>
             </div>
         </Container>
 
