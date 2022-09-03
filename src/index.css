@@ -714,6 +714,11 @@ a {
   font-weight: var(--font-medium);
 }
 
+#r-inprogress {
+  color: var(--main-yellow);
+  font-weight: var(--font-medium);
+}
+
 #replytextinputreject {
   width: 1288px;
   height: 2rem;

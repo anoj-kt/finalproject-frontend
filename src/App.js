@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Header from './components/Header';
 import Home from './components/Home';
 import UserLogin from './components/UserLogin';
@@ -12,7 +11,7 @@ import ErrorPage from './components/ErrorPage';
 import RequestListforProvidedServices from './components/RequestListforProvidedServices';
 import ProvidedServiceList from "./components/ProvidedServiceList";
 import RequestDetails from "./components/RequestDetails";
-import RequestDetailsDone from './components/RequestDetailsDone';
+import RequestDetailsPending from "./components/RequestDetailsPending";
 import RequestDetailsReject from "./components/RequestDetailsReject";
 
 function App() {
@@ -32,9 +31,8 @@ function App() {
             <Route path="user/:userId/services/provided/:serviceId/requests" element={<RequestListforProvidedServices />}></Route> 
             {/* Request Details */}
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetails />}></Route>
-            {/* <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/pending" element={<RequestDetailsPending />}></Route> */}
-            <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/rejected" element={<RequestDetailsReject />}></Route>
-            <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/completed" element={<RequestDetailsDone />}></Route>
+            <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/pending" element={<RequestDetailsPending />}></Route>
+            <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/rejected" element={<RequestDetailsReject />}></Route>
           </Routes>
         </div>
       <Footer />

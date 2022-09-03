@@ -58,9 +58,13 @@ const requestDetails = () => {
                         <input type="text" id="replytextinput" placeholder="Write your reply"></input>
                         {/* <i class="bi bi-send-fill"></i> */}
                     </div>
-                    <div className='requestd__btns'>  
-                        <button type="button" class="btn btn-success">Approve Request</button>
-                        <button type="button" class="btn btn-danger">Reject Request</button>
+                    <div className='requestd__btns'>
+                        <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId/status/pending">
+                            <button type="button" class="btn btn-success">Approve Request</button>
+                        </Link>
+                        <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId/status/rejected">
+                            <button type="button" class="btn btn-danger">Reject Request</button>
+                        </Link>
                     </div> 
                     </Col>
             </div>

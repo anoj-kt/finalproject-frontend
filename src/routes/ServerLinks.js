@@ -23,6 +23,9 @@ const ServerLinks = () => {
             {/* Requests */}
             <Link to="user/:userId/services/provided/:serviceId/requests/">Requestlist for Provided Services</Link>
             <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId">Request Details</Link>
+            <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId/status">Request in Progress</Link>
+            <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId/status/cancelled">Request Details Cancelled</Link>
+            <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId/status/done">Request Details Done</Link>
 
             {/* Send Request to use a Service  */}
             <Link to="/service/:serviceID/request/new">Send Request to use Service</Link>            
