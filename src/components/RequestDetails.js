@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import "bootstrap-icons/font/bootstrap-icons.css";
+import userimage from '../assets/images/user.png';
 
 const requestDetails = () => {
     return ( 
@@ -36,11 +38,14 @@ const requestDetails = () => {
                     <Row className="justify-content-start">
                         <div className='chatboxback'>
                             <Col md={12} className='chatboxbackground'>
+                                <img src={userimage} alt="userimage" />
+                                {/* <i class="bi bi-person-circle"></i> */}
                                 <p id="chatboxmsg">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsa temporibus voluptas dolorum porro, mollitia repudiandae hic quae sint, incidunt impedit ratione molestias quisquam odio unde minus dolores deleniti, iusto ipsum quo omnis iste commodi obcaecati? Id laborum culpa quae, quasi totam iure accusamus officiis. Quaerat ipsam alias sit facere.
                                 </p>
                             </Col>
                             <Col md={12} className='chatboxbackground2'>
+                                <img src={userimage} alt="userimage" />
                                 <p id="chatboxmsg2">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores suscipit dolorum magnam illum ullam ducimus? Earum corrupti quidem consequatur.
                                 </p>  
@@ -50,8 +55,8 @@ const requestDetails = () => {
                 </Col>
                 <Col md={12}>
                     <div className='replytext'>
-                        <input type="text" id="replytextinput" placeholder="Write your reply" />
-                        {/* <i class="bi bi-send"></i> */}
+                        <input type="text" id="replytextinput" placeholder="Write your reply"></input>
+                        {/* <i class="bi bi-send-fill"></i> */}
                     </div>
                     <div className='requestd__btns'>  
                         <button type="button" class="btn btn-success">Approve Request</button>

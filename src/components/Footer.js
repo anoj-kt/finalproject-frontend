@@ -6,8 +6,7 @@ const Footer = () => {
   return (
     <Container fluid className="footer__container">
       <Row className="justify-content-center">
-        <Col md={3}> </Col>
-        <Col md={2} className="footer__COL">
+        <Col md={4} className="footer__COL">
           <div>
             <h5>About Us</h5>
             <p>The team</p>
@@ -16,7 +15,7 @@ const Footer = () => {
             <p>Terms & conditions</p>
           </div>
         </Col>
-        <Col md={2} className="footer__COL">
+        <Col md={4} className="footer__COL">
           <div>
             <h5>Contact</h5>
             <p>Support</p>
@@ -25,7 +24,7 @@ const Footer = () => {
             <p>Contact us</p>
           </div>
         </Col>
-        <Col md={2} className="footer__COL">
+        <Col md={4} className="footer__COL">
           <div>
             <h5>Social Media</h5>
             <p>Instagram</p>
