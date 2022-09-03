@@ -17,7 +17,7 @@ const providedServiceDetails = () => {
         </div>
         <div className="requestd__moreinfo">
           <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId"style={{textDecoration: 'none', color: 'var(--main)'}}>
-           <p className='requestp__hover'>More Info</p>
+            <p className='requestp__hover'>More Info</p>
           </Link>
         </div>
         </div>
