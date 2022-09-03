@@ -51,7 +51,7 @@ function ServerRoute() {
 
 {/* DOUBLE CHECK Requests */}
                 <Route path="/requests" element={<RequestList />}></Route>
-                <Route path="user/:userId/services/provided/:serviceId/requests" element={<RequestDetailsDone />}></Route>
+                <Route path="user/:userId/services/provided/:serviceId/requests/completed" element={<RequestDetailsDone />}></Route>
                 <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetailsPending />}></Route>
                 <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetailsReject />}></Route>
 

@@ -12,7 +12,8 @@ import ErrorPage from './components/ErrorPage';
 import RequestListforProvidedServices from './components/RequestListforProvidedServices';
 import ProvidedServiceList from "./components/ProvidedServiceList";
 import RequestDetails from "./components/RequestDetails";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import RequestDetailsDone from './components/RequestDetailsDone';
+import RequestDetailsReject from "./components/RequestDetailsReject";
 
 function App() {
   return (
@@ -26,9 +27,14 @@ function App() {
             <Route path="/auth/signup" element={<UserSignup />}></Route>
             <Route path="/user/:userId/services/provided/new" element={<CreateAd />}></Route>                             
             <Route path="/404" element={<ErrorPage />}></Route>
-            <Route path="user/:userId/services/provided/:serviceId/requests" element={<RequestListforProvidedServices />}></Route>                       
-            <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetails />}></Route>
+            {/* Provided Services */}
             <Route path="/user/:userId/services/provided" element={<ProvidedServiceList />}></Route>                        
+            <Route path="user/:userId/services/provided/:serviceId/requests" element={<RequestListforProvidedServices />}></Route> 
+            {/* Request Details */}
+            <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetails />}></Route>
+            {/* <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/pending" element={<RequestDetailsPending />}></Route> */}
+            <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/rejected" element={<RequestDetailsReject />}></Route>
+            <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/completed" element={<RequestDetailsDone />}></Route>
           </Routes>
         </div>
       <Footer />
