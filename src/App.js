@@ -13,6 +13,8 @@ import ProvidedServiceList from "./components/ProvidedServiceList";
 import RequestDetails from "./components/RequestDetails";
 import RequestDetailsPending from "./components/RequestDetailsPending";
 import RequestDetailsReject from "./components/RequestDetailsReject";
+import ServiceSendRequest from "./components/ServiceSendRequest"
+import ServiceSentRequest from "./components/ServiceSentRequest"
 
 function App() {
   return (
@@ -33,6 +35,9 @@ function App() {
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetails />}></Route>
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/pending" element={<RequestDetailsPending />}></Route>
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/rejected" element={<RequestDetailsReject />}></Route>
+            {/* Send Request to use a Service  */}
+            <Route path="/service/:serviceID/request/new" element={<ServiceSendRequest />}></Route>
+            <Route path="/service/serviceID/request/sent" element={<ServiceSentRequest />}></Route>
           </Routes>
         </div>
       <Footer />
