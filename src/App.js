@@ -13,6 +13,7 @@ import ProvidedServiceList from "./components/ProvidedServiceList";
 import RequestDetails from "./components/RequestDetails";
 import RequestDetailsPending from "./components/RequestDetailsPending";
 import RequestDetailsReject from "./components/RequestDetailsReject";
+import ConsumedServiceList from "./components/ConsumedServiceList";
 
 function App() {
   return (
@@ -26,13 +27,16 @@ function App() {
             <Route path="/auth/signup" element={<UserSignup />}></Route>
             <Route path="/user/:userId/services/provided/new" element={<CreateAd />}></Route>                             
             <Route path="/404" element={<ErrorPage />}></Route>
-            {/* Provided Services */}
+            {/* Provided Services & Request Details*/}
             <Route path="/user/:userId/services/provided" element={<ProvidedServiceList />}></Route>                        
             <Route path="user/:userId/services/provided/:serviceId/requests" element={<RequestListforProvidedServices />}></Route> 
-            {/* Request Details */}
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetails />}></Route>
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/pending" element={<RequestDetailsPending />}></Route>
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/rejected" element={<RequestDetailsReject />}></Route>
+            {/* Consumed Services & Request Details */}
+            <Route path="/user/:userId/services/consumed/" element={<ConsumedServiceList />}></Route>
+
+
           </Routes>
         </div>
       <Footer />
