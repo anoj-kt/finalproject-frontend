@@ -17,8 +17,10 @@ const ServiceSendRequest = () => {
       <Row>
         <Col>
           <Form>
-            <Row>
+            <Row> {/* ======DATE AND TIME====== */}
+              <Label>When do you need this service?</Label>
               <Col>
+              {/* ======DATE====== */}
               <FormGroup>
                 <Label for="date">
                   Date
@@ -33,16 +35,76 @@ const ServiceSendRequest = () => {
                 />
                 </FormGroup>
               </Col>
+              {/* ======TIME====== */}
               <Col>
                 <FormGroup>
-                <Label for="time">
-                  Time
+                  <Label for="time">
+                    Time
+                  </Label>
+                  <Input
+                    id="time"
+                    name="time"
+                    placeholder=""
+                    type="time"
+                    required
+                    // onChange={handleChange}
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+            <Row> {/* ======ADDRESS====== */}
+              <Label>Where do you need this service?</Label>
+              <Col>
+              {/* ======STREET====== */}
+              <FormGroup>
+                <Label for="street">
+                  Street
                 </Label>
                 <Input
-                  id="time"
-                  name="time"
+                  id="street"
+                  name="street"
                   placeholder=""
-                  type="time"
+                  type="text"
+                  required
+                  // onChange={handleChange}
+                />
+                </FormGroup>
+              {/* ======POSTAL CODE====== */}
+              <FormGroup>
+                <Label for="postalCode">
+                  Postal Code
+                </Label>
+                <Input
+                  id="postalCode"
+                  name="postalCode"
+                  placeholder=""
+                  type="text"
+                  required
+                  // onChange={handleChange}
+                />
+                </FormGroup>
+              <FormGroup>
+                <Label for="city">
+                  City
+                </Label>
+                <Input
+                  id="city"
+                  name="city"
+                  placeholder=""
+                  type="text"
+                  required
+                  // onChange={handleChange}
+                />
+                </FormGroup>
+              <FormGroup>
+                <Label for="country">
+                  Country
+                </Label>
+                <Input
+                  id="country"
+                  name="country"
+                  placeholder=""
+                  type="text"
                   required
                   // onChange={handleChange}
                 />
