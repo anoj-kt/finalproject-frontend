@@ -5,22 +5,22 @@ import { Link } from 'react-router-dom';
 
 const ServiceSendRequest = () => {
   return (
-    <Container>
-      <Row>
-        <Col>
+    <Container className="form__container">
+      <Row className="justify-content-center mb-4">
+        <Col sm={12} md={5}> {/* ======TITLE OF SERVICE====== */}
           <h3>Max Mustermann Transporter</h3>
         </Col>
-        <Col>
-          €15 per hour
+        <Col md={2} className=""> {/* ======PRICE OF SERVICE====== */}
+          <p>€15 per hour</p>
         </Col>
       </Row>
-      <Row>
-        <Col>
+      <Row className="justify-content-center">
+        <Col sm={12} md={7} >
           <Form>
-            <Row> {/* ======DATE AND TIME====== */}
+            <Row className="mb-4"> {/* ======DATE AND TIME====== */}
               <Label>When do you need this service?</Label>
-              <Col>
               {/* ======DATE====== */}
+              <Col sm={12} md={6}>  
               <FormGroup>
                 <Label for="date">
                   Date
@@ -36,7 +36,7 @@ const ServiceSendRequest = () => {
                 </FormGroup>
               </Col>
               {/* ======TIME====== */}
-              <Col>
+              <Col sm={12} md={6}>
                 <FormGroup>
                   <Label for="time">
                     Time
@@ -52,7 +52,7 @@ const ServiceSendRequest = () => {
                 </FormGroup>
               </Col>
             </Row>
-            <Row> {/* ======ADDRESS====== */}
+            <Row className="mb-4"> {/* ======ADDRESS====== */}
               <Label>Where do you need this service?</Label>
               <Col>
               {/* ======STREET====== */}
