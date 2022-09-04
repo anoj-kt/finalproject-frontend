@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 const initialstate = {
   effectiveDate: Date,
+  effectiveDate: "",
+  message: "",
   address: {
     street: "",
     postalCode: "",
@@ -15,6 +17,30 @@ const initialstate = {
 
 const ServiceSendRequest = () => {
   const [newRequest, setNewRequest] = useState(initialstate);
+
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+
+    if(name === 'date') {
+      let date = new Date(value);
+      setNewRequest({...newRequest, [name]: date});
+      return
+    }
+
+    if(name === 'street' || name === 'postalCode' || name === 'city' || name === 'country') {
+      setNewRequest({
+        ...newRequest, 
+        address: {
+          ...newRequest.address,
+          [name]: value
+        }
+      });
+      return
+    }
+
+    setNewRequest({...newRequest, [name]: value});
+  }
 
   return (
     <Container className="form__container">
@@ -37,32 +63,32 @@ const ServiceSendRequest = () => {
               {/* ======DATE====== */}
               <Col sm={12} md={6}>  
               <FormGroup>
-                <Label for="date">
+                <Label for="effectiveDate">
                   Date
                 </Label>
                 <Input
-                  id="date"
-                  name="date"
+                  id="effectiveDate"
+                  name="effectiveDate"
                   placeholder=""
                   type="date"
                   required
-                  // onChange={handleChange}
+                  onChange={handleChange}
                 />
                 </FormGroup>
               </Col>
               {/* ======TIME====== */}
               <Col sm={12} md={6}>
                 <FormGroup>
-                  <Label for="time">
+                  <Label for="effectiveTime">
                     Time
                   </Label>
                   <Input
-                    id="time"
-                    name="time"
+                    id="effectiveTime"
+                    name="effectiveTime"
                     placeholder=""
                     type="time"
                     required
-                    // onChange={handleChange}
+                    onChange={handleChange}
                   />
                 </FormGroup>
               </Col>
@@ -81,7 +107,7 @@ const ServiceSendRequest = () => {
                   placeholder=""
                   type="text"
                   required
-                  // onChange={handleChange}
+                  onChange={handleChange}
                 />
                 </FormGroup>
               {/* ======POSTAL CODE====== */}
@@ -95,7 +121,7 @@ const ServiceSendRequest = () => {
                   placeholder=""
                   type="text"
                   required
-                  // onChange={handleChange}
+                  onChange={handleChange}
                 />
                 </FormGroup>
               <FormGroup>
@@ -108,7 +134,7 @@ const ServiceSendRequest = () => {
                   placeholder=""
                   type="text"
                   required
-                  // onChange={handleChange}
+                  onChange={handleChange}
                 />
                 </FormGroup>
               <FormGroup>
@@ -121,7 +147,7 @@ const ServiceSendRequest = () => {
                   placeholder=""
                   type="text"
                   required
-                  // onChange={handleChange}
+                  onChange={handleChange}
                 />
                 </FormGroup>
               </Col>
@@ -141,6 +167,7 @@ const ServiceSendRequest = () => {
                       height: '7rem',
                       resize: 'none' 
                       }}
+                    onChange={handleChange}
                   />
                 </FormGroup>
               </Col>
