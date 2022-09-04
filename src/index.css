@@ -17,6 +17,7 @@
     --main-grey-text: hsla(0, 0%, 2%, 0.4);
     --main-green: hsl(130, 55%, 45%);
     --main-green-alt: hsl(130, 75%, 35%);
+    --price-red: hsl(356, 58%, 57%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
@@ -563,6 +564,37 @@ a {
   opacity: 50%;
 }
 
+ /* =================NEW REQUEST================= */
+
+ @media screen and (min-width: 62em) {
+  .newrequest__price-COL  {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+ .newrequest__price {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  border: 1px solid var(--main-grey);
+  border-radius: 10px;
+  width: fit-content;
+  text-align: right;
+ }
+
+ .newrequest__price-value {
+  color: var(--price-red);
+  padding: 0 0.5rem;
+  margin: 0;
+ }
+
+ .newrequest__price-type {
+  color: var(--main-grey-text);
+  font-weight: var(--font-semi-bold);
+  margin: 0;
+  padding-right: 0.5rem;
+ }
 
 /* =================REQUST LIST FOR PROVIDED SERVICES================= */
 

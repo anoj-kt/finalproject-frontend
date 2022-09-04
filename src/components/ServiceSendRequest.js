@@ -6,16 +6,19 @@ import { Link } from 'react-router-dom';
 const ServiceSendRequest = () => {
   return (
     <Container className="form__container">
-      <Row className="justify-content-center mb-4">
-        <Col sm={12} md={5}> {/* ======TITLE OF SERVICE====== */}
+      <Row className="justify-content-center align-items-center mb-4">
+        <Col md={12} lg={5}> {/* ======TITLE OF SERVICE====== */}
           <h3>Max Mustermann Transporter</h3>
         </Col>
-        <Col md={2} className=""> {/* ======PRICE OF SERVICE====== */}
-          <p>€15 per hour</p>
+        <Col lg={2} className="newrequest__price-COL"> {/* ======PRICE OF SERVICE====== */}
+          <div className="newrequest__price">
+            <h3 className="newrequest__price-value">€15</h3>
+            <p className="newrequest__price-type">per hour</p>
+          </div>
         </Col>
       </Row>
       <Row className="justify-content-center">
-        <Col sm={12} md={7} >
+        <Col md={12} lg={7} >
           <Form>
             <Row className="mb-4"> {/* ======DATE AND TIME====== */}
               <Label>When do you need this service?</Label>
