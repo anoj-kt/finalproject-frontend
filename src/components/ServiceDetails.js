@@ -9,16 +9,26 @@ const ServiceDetails = () => {
             {/* ======TITLE====== */}
             <Row>
                 <Col>
+                    <h3>Max Mustermann Transporter</h3>
                 </Col>
             </Row>
             {/* ======LOCATION AND RATING====== */}
             <Row>
                 <Col>
+                    <div>Berlin, Germany</div>
+                    <div>Reviews</div>
                 </Col>
             </Row>
-            {/* ======DETAILS====== */}
+            {/* ======IMAGES, DETAILS AND SEND REQUEST BUTTON====== */}
             <Row>
                 <Col>
+                    <div>IMAGE</div>
+                </Col>
+                <Col>
+                    <div>
+                        <h5>Details</h5>
+                        
+                    </div>
                 </Col>
             </Row>
             {/* ======PRICE====== */}
