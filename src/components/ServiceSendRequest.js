@@ -18,6 +18,17 @@ const initialstate = {
 const ServiceSendRequest = () => {
   const [newRequest, setNewRequest] = useState(initialstate);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch('http://localhost:8000/testw', { //=====CHANGE URL=====//
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(newRequest)
+    })
+    .then((res) => console.log(res))
+    .catch(err => console.log(err))
+  }
 
   const handleChange = (e) => {
     const {name, value} = e.target;
@@ -57,7 +68,7 @@ const ServiceSendRequest = () => {
       </Row>
       <Row className="justify-content-center">
         <Col md={12} lg={7} >
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Row className="mb-4"> {/* ======DATE AND TIME====== */}
               <Label>When do you need this service?</Label>
               {/* ======DATE====== */}
