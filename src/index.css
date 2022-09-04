@@ -679,6 +679,18 @@ a {
   margin-bottom: 0;
 }
 
+.service__request-btn {
+  border-radius: 10px;
+  margin: 0.5rem auto;
+  padding: 0.5rem 1rem;
+  font-weight: var(--font-medium);
+  background-color: var(--main-green);
+  color: white;
+}
+.service__request-btn:hover {
+  background-color: var(--main-green-alt);
+}
+
  /* =================REQUEST DETAILS================= */
 
 .requestdetails__container {
