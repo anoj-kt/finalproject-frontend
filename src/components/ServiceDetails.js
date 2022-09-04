@@ -7,22 +7,22 @@ import { Link } from 'react-router-dom';
 const ServiceDetails = () => {
 
     return (
-        <Container>
+        <Container className="mb-4 mt-4">
             {/* ======TITLE====== */}
-            <Row>
+            <Row className="mb-2">
                 <Col>
                     <h3>Max Mustermann Transporter</h3>
                 </Col>
             </Row>
             {/* ======LOCATION AND RATING====== */}
-            <Row>
+            <Row className="mb-3">
                 <Col>
                     <div>Berlin, Germany</div>
                     <div>Reviews</div>
                 </Col>
             </Row>
             {/* ======IMAGES, DETAILS AND SEND REQUEST BUTTON====== */}
-            <Row>
+            <Row className="mb-3">
                 {/* ======IMAGES CAROUSEL====== */}
                 <Col>
                     <Carousel fade className="service__carousel">
@@ -85,8 +85,12 @@ const ServiceDetails = () => {
                 </Col>
             </Row>
             {/* ======PRICE====== */}
-            <Row>
+            <Row className="mb-3">
                 <Col>
+                <div className="newrequest__price">
+                    <h3 className="newrequest__price-value">€15</h3>
+                    <p className="newrequest__price-type">per hour</p>
+                </div>
                 </Col>
             </Row>
             {/* ======DESCRIPTION====== */}
