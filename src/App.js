@@ -30,14 +30,16 @@ function App() {
             <Route path="/404" element={<ErrorPage />}></Route>
             {/* Provided Services */}
             <Route path="/user/:userId/services/provided" element={<ProvidedServiceList />}></Route>                        
-            <Route path="user/:userId/services/provided/:serviceId/requests" element={<RequestListforProvidedServices />}></Route> 
+            <Route path="/user/:userId/services/provided/:serviceId/requests" element={<RequestListforProvidedServices />}></Route> 
             {/* Request Details */}
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetails />}></Route>
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/pending" element={<RequestDetailsPending />}></Route>
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/rejected" element={<RequestDetailsReject />}></Route>
+            {/* Get service details  */}
+            <Route path="/service/:serviceId" element={<ServiceSendRequest />}></Route>
             {/* Send Request to use a Service  */}
             <Route path="/service/:serviceID/request/new" element={<ServiceSendRequest />}></Route>
-            <Route path="/service/serviceID/request/sent" element={<ServiceSentRequest />}></Route>
+            <Route path="/service/:serviceID/request/sent" element={<ServiceSentRequest />}></Route>
           </Routes>
         </div>
       <Footer />
