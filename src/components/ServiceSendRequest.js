@@ -111,6 +111,25 @@ const ServiceSendRequest = () => {
                 </FormGroup>
               </Col>
             </Row>
+            <Row> {/* ======MESSAGE====== */}
+              <Col>
+                <FormGroup>
+                  <Label for="message">
+                    Your message for Max Mustermann Transporter
+                  </Label>
+                  <Input
+                     id="message"
+                     name="message"
+                     placeholder="Please provide any additional details for the provider here..."
+                     type="textarea"
+                     style={{ 
+                      height: '7rem',
+                      resize: 'none' 
+                      }}
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
           </Form>
         </Col>
       </Row>
