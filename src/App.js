@@ -39,8 +39,8 @@ function App() {
             {/* Get service details  */}
             <Route path="/service/:serviceId" element={<ServiceDetails />}></Route>
             {/* Send Request to use a Service  */}
-            <Route path="/service/:serviceID/request/new" element={<ServiceSendRequest />}></Route>
-            <Route path="/service/:serviceID/request/sent" element={<ServiceSentRequest />}></Route>
+            <Route path="/service/:serviceId/request/new" element={<ServiceSendRequest />}></Route>
+            <Route path="/service/:serviceId/request/sent" element={<ServiceSentRequest />}></Route>
           </Routes>
         </div>
       <Footer />

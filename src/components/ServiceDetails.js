@@ -45,7 +45,7 @@ const ServiceDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <Link to="./service/:serviceID/request/new'" style={{textDecoration: 'none'}}>
+                    <Link to="./request/new" style={{textDecoration: 'none'}}>
                         <button className="button service__request-btn">
                             Send request
                         </button>
