@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
 import { Link } from 'react-router-dom';
@@ -17,6 +17,12 @@ const initialstate = {
 
 const ServiceSendRequest = () => {
   const [newRequest, setNewRequest] = useState(initialstate);
+
+  useEffect(() => {
+    fetch('http://localhost:8000/service/:serviceID/request/new') //=====CHANGE URL=====//
+    .then((res) => console.log(res))
+    .catch(err => console.log(err))
+  })
 
   const handleSubmit = (e) => {
     e.preventDefault();
