@@ -6,9 +6,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 const consumedServiceList = () => {
 
 
-
-
-
   return (
     <Container fluid className="requestd_container">
     <div className='requestd__content'>
