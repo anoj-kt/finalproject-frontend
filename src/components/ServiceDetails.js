@@ -27,7 +27,20 @@ const ServiceDetails = () => {
                 <Col>
                     <div>
                         <h5>Details</h5>
-                        
+                        <div>
+                            <i class="uil uil-user-check"></i>
+                            <p>Member since June 2020</p>
+                        </div>
+                        <div>
+                            <i class="uil uil-phone"></i>
+                            <p>+49 121211212</p>
+                        </div>
+                        <div>
+                            <i class="uil uil-map-marker icon"></i>
+                            <p>Mayway Straße 10</p>
+                            <p>Cologne</p>
+                            <p>Germany</p>
+                        </div>
                     </div>
                 </Col>
             </Row>
