@@ -25,21 +25,23 @@ const ServiceDetails = () => {
                     <div>IMAGE</div>
                 </Col>
                 <Col>
-                    <div>
-                        <h5>Details</h5>
-                        <div>
-                            <i class="uil uil-user-check"></i>
+                    <div className="service__details">
+                        <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Details</h5>
+                        <div className="service__details-content">
+                            <i class="uil uil-user-check icon-green"></i>
                             <p>Member since June 2020</p>
                         </div>
-                        <div>
-                            <i class="uil uil-phone"></i>
+                        <div className="service__details-content">
+                            <i class="uil uil-phone icon-green"></i>
                             <p>+49 121211212</p>
                         </div>
-                        <div>
-                            <i class="uil uil-map-marker icon"></i>
-                            <p>Mayway Straße 10</p>
-                            <p>Cologne</p>
-                            <p>Germany</p>
+                        <div className="service__details-content">
+                            <i class="uil uil-map-marker icon-green"></i>
+                            <div>
+                                <p>Mayway Straße 10</p>
+                                <p>Cologne</p>
+                                <p>Germany</p>
+                            </div>
                         </div>
                     </div>
                 </Col>

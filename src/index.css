@@ -15,6 +15,7 @@
     --main-black: hsl(0, 0%, 17%);
     --main-grey: hsla(0, 0%, 2%, 0.2);
     --main-grey-text: hsla(0, 0%, 2%, 0.4);
+    --main-grey-light: hsla(0, 0%, 0%, 0.05);
     --main-green: hsl(130, 55%, 45%);
     --main-green-alt: hsl(130, 75%, 35%);
     --price-red: hsl(356, 58%, 57%);
@@ -99,6 +100,12 @@ a {
   padding-right: 0.25rem;
   font-size: 1.25rem;
   color: white;
+}
+
+.icon-green {
+  padding-right: 0.25rem;
+  font-size: 1.25rem;
+  color: var(--main-green);
 }
 
 .nopadding {
@@ -648,6 +655,29 @@ a {
  .requestp__hover:hover {
   opacity: 70%;
  }
+
+/* =================SERVICE DETAILS================= */
+.service__details {
+  padding: 0.5rem;
+  border: 1px solid var(--main-grey);
+  border-radius: 10px;
+}
+
+.service__details-content{
+  display: flex;
+  align-items: start;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  background-color: var(--main-grey-light)
+}
+
+.service__details-content p{
+  padding-left: 0.5rem;
+  font-weight: var(--font-semi-bold);
+  align-self: center;
+  margin-bottom: 0;
+}
 
  /* =================REQUEST DETAILS================= */
 
