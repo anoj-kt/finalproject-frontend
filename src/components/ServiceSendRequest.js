@@ -130,6 +130,10 @@ const ServiceSendRequest = () => {
                 </FormGroup>
               </Col>
             </Row>
+            {/* ======SUBMIT BUTTON====== */}
+            <div className="form__submit">
+              <button className="form__submit-btn button">Confirm request</button>
+            </div>
           </Form>
         </Col>
       </Row>
