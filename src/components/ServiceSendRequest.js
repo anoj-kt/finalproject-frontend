@@ -5,9 +5,17 @@ import { Link } from 'react-router-dom';
 
 const ServiceSendRequest = () => {
   return (
-    <div>
-      <h2>SEND REQUEST FOR A SERVICE</h2>
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <Form>
+            <FormGroup>
+              
+            </FormGroup>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
