@@ -3,7 +3,19 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
 import { Link } from 'react-router-dom';
 
+const initialstate = {
+  effectiveDate: Date,
+  address: {
+    street: "",
+    postalCode: "",
+    city:"",
+    country:""
+  }
+}
+
 const ServiceSendRequest = () => {
+  const [newRequest, setNewRequest] = useState(initialstate);
+
   return (
     <Container className="form__container">
       <Row className="justify-content-center align-items-center mb-4">
