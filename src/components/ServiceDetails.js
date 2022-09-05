@@ -58,7 +58,7 @@ const ServiceDetails = () => {
                 </Col>
                 {/* ======DETAILS AND SEND REQ====== */}
                 <Col>
-                    <div className="service__details">
+                    <div className="service__details service-border">
                         <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Details</h5>
                         <div className="service__details-content">
                             <i class="uil uil-user-check icon-green"></i>
@@ -96,6 +96,10 @@ const ServiceDetails = () => {
             {/* ======DESCRIPTION====== */}
             <Row>
                 <Col>
+                    <div className="service__description service-border">
+                        <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Description</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quos minus aliquam amet fugiat repellendus natus fugit sunt excepturi, veritatis ducimus sed, nesciunt, porro nostrum accusantium. Suscipit repudiandae hic quis rerum modi. Doloremque quo sapiente a excepturi animi dolores dignissimos aut dicta provident quos est, velit laborum totam, et voluptatem magni vero. Adipisci laudantium qui optio impedit eum repellendus suscipit ex, illum laborum aspernatur in eaque rerum repellat voluptatibus. Vero!</p>
+                    </div>
                 </Col>
             </Row>
             {/* ======REVIEWS====== */}

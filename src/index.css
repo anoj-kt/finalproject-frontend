@@ -657,17 +657,17 @@ a {
  }
 
 /* =================SERVICE DETAILS================= */
+.service-border {
+  padding: 0.5rem;
+  border: 1px solid var(--main-grey);
+  border-radius: 10px;
+}
+
 .service__carousel {
   z-index: 0;
 }
 
 .service__carousel-image {
-  border-radius: 10px;
-}
-
-.service__details {
-  padding: 0.5rem;
-  border: 1px solid var(--main-grey);
   border-radius: 10px;
 }
 
