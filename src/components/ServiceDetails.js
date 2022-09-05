@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
 import { Link } from 'react-router-dom';
+import user from '../assets/images/user.png'
 
 const ServiceDetails = () => {
 
@@ -108,6 +109,19 @@ const ServiceDetails = () => {
             {/* ======REVIEWS====== */}
             <Row className="justify-content-center mb-3">
                 <Col sm={12} md={10}>
+                    <div className="service__reviews service-border">
+                        <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Reviews</h5>
+                        <div className="service__review">
+                            <img src={user} alt="user image" />
+                            <div>
+                                <h6>John Doe</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, eveniet.</p>
+                            </div>
+                            <div>
+                                Score
+                            </div>
+                        </div>
+                    </div>
                 </Col>
             </Row>
         </Container>
