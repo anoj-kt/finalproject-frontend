@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -20,7 +19,7 @@ const consumedServiceList = () => {
         <p>Status</p>
       </div>
       <div className="requestd__moreinfo">
-        <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId"style={{textDecoration: 'none', color: 'var(--main)'}}>
+        <Link to="/user/:userId/services/consumed/requests/:requestId"style={{textDecoration: 'none', color: 'var(--main)'}}>
           <p className='requestp__hover'>More Info</p>
         </Link>
       </div>
