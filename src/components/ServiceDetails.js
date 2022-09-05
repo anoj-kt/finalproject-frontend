@@ -9,22 +9,25 @@ const ServiceDetails = () => {
     return (
         <Container className="mb-4 mt-4">
             {/* ======TITLE====== */}
-            <Row className="mb-2">
-                <Col>
+            <Row className="justify-content-center mb-2">
+                <Col md={10}>
                     <h3>Max Mustermann Transporter</h3>
                 </Col>
             </Row>
             {/* ======LOCATION AND RATING====== */}
             <Row className="mb-3">
-                <Col>
-                    <div>Berlin, Germany</div>
-                    <div>Reviews</div>
+                <Col className="d-flex justify-content-between mb-3" md={{offset: 1, span: 6}}>
+                    <div className="service__location">
+                        <i class="uil uil-map-marker icon"></i>
+                        <h6>Berlin, Germany</h6>
+                    </div>
+                    <div>Overall score</div>
                 </Col>
             </Row>
             {/* ======IMAGES, DETAILS AND SEND REQUEST BUTTON====== */}
-            <Row className="mb-3">
+            <Row className="justify-content-center mb-3">
                 {/* ======IMAGES CAROUSEL====== */}
-                <Col>
+                <Col sm={12} md={6} className="">
                     <Carousel fade className="service__carousel">
                         <Carousel.Item>
                             <img
@@ -57,7 +60,7 @@ const ServiceDetails = () => {
                     </Carousel>
                 </Col>
                 {/* ======DETAILS AND SEND REQ====== */}
-                <Col>
+                <Col sm={12} md={4}>
                     <div className="service__details service-border">
                         <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Details</h5>
                         <div className="service__details-content">

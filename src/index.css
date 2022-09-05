@@ -663,6 +663,17 @@ a {
   border-radius: 10px;
 }
 
+.service__location {
+  display: flex;
+  align-items: center;
+  color: var(--main-grey-text);
+  font-weight: var(--font-semi-bold);
+}
+
+.service__location h6 {
+  margin: 0;
+}
+
 .service__carousel {
   z-index: 0;
 }
