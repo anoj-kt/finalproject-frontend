@@ -15,6 +15,9 @@ import RequestDetailsPending from "./components/RequestDetailsPending";
 import RequestDetailsReject from "./components/RequestDetailsReject";
 import ConsumedServiceList from "./components/ConsumedServiceList";
 import ConsumedServiceDetails from "./components/ConsumedServiceDetails";
+import ServiceSendRequest from "./components/ServiceSendRequest"
+import ServiceSentRequest from "./components/ServiceSentRequest"
+
 
 function App() {
   return (
@@ -37,8 +40,9 @@ function App() {
             {/* Consumed Services & Request Details */}
             <Route path="/user/:userId/services/consumed/" element={<ConsumedServiceList />}></Route>
             <Route path="/user/:userId/services/consumed/requests/:requestId" element={<ConsumedServiceDetails />}></Route>
-
-
+            {/* Send Request to use a Service  */}
+            <Route path="/service/:serviceID/request/new" element={<ServiceSendRequest />}></Route>
+            <Route path="/service/serviceID/request/sent" element={<ServiceSentRequest />}></Route>
           </Routes>
         </div>
       <Footer />
