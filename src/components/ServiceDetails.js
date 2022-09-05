@@ -27,7 +27,7 @@ const ServiceDetails = () => {
             {/* ======IMAGES, DETAILS AND SEND REQUEST BUTTON====== */}
             <Row className="justify-content-center mb-3">
                 {/* ======IMAGES CAROUSEL====== */}
-                <Col sm={12} md={6} className="">
+                <Col sm={12} md={6} className="mb-3">
                     <Carousel fade className="service__carousel">
                         <Carousel.Item>
                             <img
@@ -88,8 +88,8 @@ const ServiceDetails = () => {
                 </Col>
             </Row>
             {/* ======PRICE====== */}
-            <Row className="mb-3">
-                <Col>
+            <Row className="justify-content-center mb-3">
+                <Col sm={12} md={10}>
                 <div className="newrequest__price">
                     <h3 className="newrequest__price-value">€15</h3>
                     <p className="newrequest__price-type">per hour</p>
@@ -97,8 +97,8 @@ const ServiceDetails = () => {
                 </Col>
             </Row>
             {/* ======DESCRIPTION====== */}
-            <Row>
-                <Col>
+            <Row className="justify-content-center mb-3">
+                <Col sm={12} md={10}>
                     <div className="service__description service-border">
                         <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Description</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quos minus aliquam amet fugiat repellendus natus fugit sunt excepturi, veritatis ducimus sed, nesciunt, porro nostrum accusantium. Suscipit repudiandae hic quis rerum modi. Doloremque quo sapiente a excepturi animi dolores dignissimos aut dicta provident quos est, velit laborum totam, et voluptatem magni vero. Adipisci laudantium qui optio impedit eum repellendus suscipit ex, illum laborum aspernatur in eaque rerum repellat voluptatibus. Vero!</p>
@@ -106,8 +106,8 @@ const ServiceDetails = () => {
                 </Col>
             </Row>
             {/* ======REVIEWS====== */}
-            <Row>
-                <Col>
+            <Row className="justify-content-center mb-3">
+                <Col sm={12} md={10}>
                 </Col>
             </Row>
         </Container>
