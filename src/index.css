@@ -752,9 +752,8 @@ a {
 }
 
  /* =================REQUEST DETAILS================= */
-=======
+
  /* =================PROVIDED SERVICES REQUEST DETAILS================= */
->>>>>>> main
 
 /* .requestdetails__container {
   height: calc(100vh - 162.44px);
@@ -918,3 +917,6 @@ a {
   font-weight: var(--font-medium);
   color: red;
 }
+
+/* =================CONSUMED SERVICES================= */
+

@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import UserLogin from './components/UserLogin';
 import UserSignup from './components/UserSignup';
+import UserProfile from './components/UserProfile';
 import Footer from './components/Footer';
 import CreateAd from './components/CreateAd'
 import ErrorPage from './components/ErrorPage';
@@ -32,6 +33,7 @@ function App() {
             <Route exact path="/" element={<Home />}></Route>
             <Route path="/auth/login" element={<UserLogin />}></Route>
             <Route path="/auth/signup" element={<UserSignup />}></Route>
+            <Route path="/user/:userid/profle" element={<UserSignup />}></Route>
             <Route path="/user/:userId/services/provided/new" element={<CreateAd />}></Route>                             
             <Route path="/404" element={<ErrorPage />}></Route>
             {/* Provided Services & Request Details*/}
