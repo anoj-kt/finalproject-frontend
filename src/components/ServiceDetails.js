@@ -112,12 +112,10 @@ const ServiceDetails = () => {
                     <div className="service__reviews service-border">
                         <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Reviews</h5>
                         <div className="service__review">
-                            <img src={user} alt="user image" />
-                            <div>
-                                <h6>John Doe</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, eveniet.</p>
-                            </div>
-                            <div>
+                            <img className="service__review-image" src={user} alt="user image" />
+                            <h6 className="service__review-user">John Doe</h6>
+                            <p className="service__review-comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, eveniet.</p>
+                            <div className="service__review-score">
                                 Score
                             </div>
                         </div>

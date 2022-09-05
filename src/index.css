@@ -711,15 +711,34 @@ a {
 }
 
 .service__review {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2rem 1fr 4rem;
+  grid-template-rows: 1.5rem 1.5rem;
+  gap: 0.5rem;
   align-items: start;
   padding: 0.5rem;
   border-radius: 10px;
-  margin: 0.5rem 0;
+  /* margin: 0.5rem 0; */
   background-color: var(--main-grey-light)
 }
 
+.service__review-image {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 2rem;
+  margin-right: 1rem;
+}
 
+.service__review-user {
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+.service__review-comment {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.service__review-score {
+  grid-area: 1 / 3 / 4 / 4;
+}
 
  /* =================REQUEST DETAILS================= */
 
