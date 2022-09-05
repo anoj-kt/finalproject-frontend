@@ -4,9 +4,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import userimage from "../assets/images/user.png";
 
-const consumedServiceDetails = () => {
+const consumedServiceDetailsPending = () => {
   return (
-    <Container fluid className="requestdetails__container">
+    <Container fluid className="servicedetails__container">
             <div className='requestdetails__content'>
                 <h2>John Doe's Web-Design Service</h2>
                 <p class="lead">Service Details</p>
@@ -25,7 +25,7 @@ const consumedServiceDetails = () => {
                     <div className='requestdetails__2'>
                         <h6>22.09.2022</h6>
                         <h6>15:40</h6>
-                        <h6 id="c-green">Completed</h6>
+                        <h6 id="c-yellow">in Progress</h6>
                     </div>
                 </Col>
                 <Col md={2}>
@@ -45,40 +45,16 @@ const consumedServiceDetails = () => {
                             <Col md={12} className='chatboxbackground2'>
                                 <img src={userimage} alt="userimage" />
                                 <p id="chatboxmsg2">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores suscipit dolorum magnam illum ullam ducimus? Earum corrupti quidem consequatur.
-                                </p>  
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores suscipit dolorum magnam illum ullam ducimus? Earum corrupti quidem consequatur.
+                                </p>
                             </Col>
                         </div>
                     </Row>
                 </Col>
-                <Col md={12}>
-                    {/* <div className='replytext'>
-                        <input type="text" id="replytextinput" placeholder="Write your reply"></input>
-                    </div> */}
-                    <Col md={9} className="">
-                      <h4 id="cservicedone">Service is marked as completed from the service provider, please give your Feedback.</h4>
-                      <div className="feedbackbuttons">
-                        <div className="feedbackbuttons__background"><h6>Extremely Satisfied</h6></div>
-                        <div className="feedbackbuttons__background"><h6>Very Satisfied</h6></div>
-                        <div className="feedbackbuttons__background"><h6>Satisfied</h6></div>
-                        <div className="feedbackbuttons__background"><h6>Slightly Satisfied</h6></div>
-                        <div className="feedbackbuttons__background"><h6>Not Satisfied</h6></div>
-                      </div>
-                      <div className="feedbackarea">
-                        <div className="form-outline">
-                          <textarea className="form-control" rows="6" cols="160" placeholder="please type your feedback message here."></textarea>
-                      </div>
-                      </div>
-                    </Col>  
-                    <div className='requestd__btns'>
-                        {/* <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId/status/rejected"> */}
-                        <button type="button" class="btn btn-warning">Send Feedback</button>
-                        {/* </Link> */}
-                    </div> 
-                    </Col>
+                <input type="text" id="replytextinput" placeholder="Write your reply"></input>
             </div>
         </Container>
   )
 }
 
-export default consumedServiceDetails
+export default consumedServiceDetailsPending

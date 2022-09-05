@@ -761,13 +761,18 @@ a {
 
 /* =================CONSUMED SERVICES================= */
 
-.willbeused {
+.servicedetails__container {
   height: calc(100vh - 162.44px);
  }
 
  #c-green {
   font-weight: var(--font-medium);
   color: var(--main-green);
+ }
+
+ #c-yellow {
+  font-weight: var(--font-medium);
+  color: var(--main-yellow-alt);
  }
 
  .feedbackbuttons {
@@ -802,3 +807,4 @@ a {
   margin-top: 2rem;
   resize: none;
  }
+
