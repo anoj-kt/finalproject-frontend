@@ -31,6 +31,7 @@ const ServerLinks = () => {
             <Link to="/user/:userId/services/consumed">Consumed Services List</Link>
             <Link to="user/:userId/services/consumed/requests/:requestId">Consumed Service Details</Link>            
             <Link to="/user/:userId/services/consumed/requests/:requestId/pending">Consumed Service Details Pending</Link> 
+            <Link to="/user/:userId/services/consumed/requests/:requestId/rejected">Consumed Service Details Rejected</Link> 
 
             {/* Send Request to use a Service  */}
             <Link to="/service/:serviceID/request/new">Send Request to use Service</Link>            

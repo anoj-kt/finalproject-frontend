@@ -63,6 +63,7 @@ function ServerRoute() {
                 <Route path="/user/:userId/services/consumed" element={<ConsumedServiceList />}></Route> 
                 <Route path="/user/:userId/services/consumed/requests/:requestId" element={<ConsumedServiceDetails />}></Route>
                 <Route path="/user/:userId/services/consumed/requests/:requestId/pending" element={<ConsumedServiceDetailsPending />}></Route>
+                <Route path="/user/:userId/services/consumed/requests/:requestId/rejected" element={<ConsumedServiceDetailsRejected />}></Route>
                 
 
                 {/* User Provided Services  */}    

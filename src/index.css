@@ -762,7 +762,8 @@ a {
 /* =================CONSUMED SERVICES================= */
 
 .servicedetails__container {
-  height: calc(100vh - 162.44px);
+  margin-bottom: 14rem;
+  /* height: calc(100vh - 162.44px); */
  }
 
  #c-green {
@@ -808,3 +809,7 @@ a {
   resize: none;
  }
 
+#c-red {
+  font-weight: var(--font-medium);
+  color: red;
+}
