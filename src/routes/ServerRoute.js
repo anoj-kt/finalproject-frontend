@@ -49,7 +49,7 @@ function ServerRoute() {
                 <Route path="/user/:userId/services/provided/:serviceId/edit" element={<EditAd />}></Route> 
                 <Route path="/user/:userId/services/provided/:serviceId/status/" element={<EditAdConfirm />}></Route>
 
-                {/* Request Details for Provided Services */}
+                {/* Request & Details for Provided Services */}
                 <Route path="/requests" element={<RequestList />}></Route>
                 <Route path="/user/:userId/services/provided/:serviceId/requests/completed" element={<RequestDetailsDone />}></Route>
                 <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/pending" element={<RequestDetailsPending />}></Route>
@@ -59,12 +59,14 @@ function ServerRoute() {
                 <Route path="/service/:serviceID/request/new" element={<ServiceSendRequest />}></Route>
                 <Route path="/service/serviceID/request/sent" element={<ServiceSentRequest />}></Route>
 
-                {/* Consumed Services  */}
+                {/* Request & Details for Consumed Services  */}
                 <Route path="/user/:userId/services/consumed" element={<ConsumedServiceList />}></Route> 
                 <Route path="/user/:userId/services/consumed/requests/:requestId" element={<ConsumedServiceDetails />}></Route>
+                <Route path="/user/:userId/services/consumed/requests/:requestId/pending" element={<ConsumedServiceDetailsPending />}></Route>
+                <Route path="/user/:userId/services/consumed/requests/:requestId/rejected" element={<ConsumedServiceDetailsRejected />}></Route>
                 
 
-                {/* Provided Services  */}    
+                {/* User Provided Services  */}    
                 <Route path="/user/:userId/services/provided" element={<ProvidedServiceList />}></Route>          
                 <Route path="/user/:userId/services/provided/requests/:requestId" element={<ProvidedServiceDetails />}></Route>          
                 
