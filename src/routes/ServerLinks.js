@@ -20,22 +20,26 @@ const ServerLinks = () => {
             <Link to="/user/:userId/services/provided/:serviceId/edit">Edit Advertisement</Link>
             <Link to="/user/:userId/services/provided/:serviceId/status/">Confirm Edits Advertisement</Link>
 
-            {/* Requests */}
+            {/* Requests & Details for Provided Services */}
             <Link to="user/:userId/services/provided/:serviceId/requests/">Requestlist for Provided Services</Link>
             <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId">Request Details</Link>
             <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId/status">Request in Progress</Link>
             <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId/status/cancelled">Request Details Cancelled</Link>
             <Link to="/user/:userId/services/provided/:serviceId/requests/:requestId/status/done">Request Details Done</Link>
 
+            {/* Requests & Details for Consumed Services */}
+            <Link to="/user/:userId/services/consumed">Consumed Services List</Link>
+            <Link to="user/:userId/services/consumed/requests/:requestId">Consumed Service Details</Link>            
+            <Link to="/user/:userId/services/consumed/requests/:requestId/pending">Consumed Service Details Pending</Link> 
+            <Link to="/user/:userId/services/consumed/requests/:requestId/rejected">Consumed Service Details Rejected</Link> 
+
             {/* Send Request to use a Service  */}
             <Link to="/service/:serviceID/request/new">Send Request to use Service</Link>            
             <Link to="/service/serviceID/request/sent">Request Sent to use Service</Link> 
 
-            {/* Consumed Services */}
-            <Link to="/user/:userId/services/consumed">Consumed Services List</Link>
-            <Link to="user/:userId/services/consumed/requests/:requestId">Consumed Service Details</Link>            
+                       
 
-            {/* Provided Services  */}
+            {/* User Provided Services  */}
             <Link to="/user/:userId/services/provided">Provided Service List</Link>
             <Link to="/user/:userId/provided/:serviceId/details">Provided Service Details</Link>
 
