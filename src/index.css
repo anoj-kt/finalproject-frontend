@@ -713,9 +713,8 @@ a {
 .service__review {
   display: grid;
   grid-template-columns: 2rem 1fr 4rem;
-  grid-template-rows: 1.5rem 1.5rem;
+  grid-template-rows: 1.5rem 1fr;
   gap: 0.5rem;
-  align-items: start;
   padding: 0.5rem;
   border-radius: 10px;
   /* margin: 0.5rem 0; */
@@ -730,10 +729,12 @@ a {
 
 .service__review-user {
   grid-area: 1 / 2 / 3 / 3;
+  margin: 0;
 }
 
 .service__review-comment {
   grid-area: 2 / 2 / 3 / 4;
+  margin: 0;
 }
 
 .service__review-score {
