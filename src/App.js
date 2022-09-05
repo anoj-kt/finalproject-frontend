@@ -33,7 +33,7 @@ function App() {
             <Route exact path="/" element={<Home />}></Route>
             <Route path="/auth/login" element={<UserLogin />}></Route>
             <Route path="/auth/signup" element={<UserSignup />}></Route>
-            <Route path="/user/:userid/profle" element={<UserSignup />}></Route>
+            <Route path="/user/:userid/profile" element={<UserProfile />}></Route>
             <Route path="/user/:userId/services/provided/new" element={<CreateAd />}></Route>                             
             <Route path="/404" element={<ErrorPage />}></Route>
             {/* Provided Services & Request Details*/}

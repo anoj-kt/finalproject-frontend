@@ -920,3 +920,43 @@ a {
 
 /* =================CONSUMED SERVICES================= */
 
+.userprofile__container {
+  height: calc(100vh - 162.44px);
+}
+
+.userprofile__container2 {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.userprofile__info {
+  margin: 2rem 0 0 2rem;
+}
+
+#userprofilepic {
+  border: 1px solid gray;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+#uphr {
+  border: 1px solid var(--main-black);
+  border-radius: 50px;
+  width: 320px;
+}
+
+#uphr2 {
+  border: 1px solid var(--main-black);
+  border-radius: 50px;
+  width: 460px;
+}
+
+.service-buttons {
+  /* display: flex; */
+  margin: 2rem 0 0 2rem;
+}
+
+.service-buttons button {
+  color: var(--main-black);
+  font-weight: var(--font-medium);
+  margin: 0.5rem 5rem 0 0;
+}
