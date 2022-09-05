@@ -15,6 +15,7 @@
     --main-black: hsl(0, 0%, 17%);
     --main-grey: hsla(0, 0%, 2%, 0.2);
     --main-grey-text: hsla(0, 0%, 2%, 0.4);
+    --main-grey-light: hsla(0, 0%, 0%, 0.05);
     --main-green: hsl(130, 55%, 45%);
     --main-green-alt: hsl(130, 75%, 35%);
     --price-red: hsl(356, 58%, 57%);
@@ -99,6 +100,12 @@ a {
   padding-right: 0.25rem;
   font-size: 1.25rem;
   color: white;
+}
+
+.icon-green {
+  padding-right: 0.25rem;
+  font-size: 1.25rem;
+  color: var(--main-green);
 }
 
 .nopadding {
@@ -649,7 +656,105 @@ a {
   opacity: 70%;
  }
 
+/* =================SERVICE DETAILS================= */
+.service-border {
+  padding: 0.5rem;
+  border: 1px solid var(--main-grey);
+  border-radius: 10px;
+}
+
+.service__location {
+  display: flex;
+  align-items: center;
+  color: var(--main-grey-text);
+  font-weight: var(--font-semi-bold);
+}
+
+.service__location h6 {
+  margin: 0;
+}
+
+.service__carousel {
+  z-index: 0;
+}
+
+.service__carousel-image {
+  border-radius: 10px;
+}
+
+.service__details-content{
+  display: flex;
+  align-items: start;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  background-color: var(--main-grey-light)
+}
+
+.service__details-content p{
+  padding-left: 0.5rem;
+  font-weight: var(--font-semi-bold);
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.service__request-btn {
+  border-radius: 10px;
+  margin: 0.5rem auto;
+  padding: 0.5rem 1rem;
+  font-weight: var(--font-medium);
+  background-color: var(--main-green);
+  color: white;
+}
+.service__request-btn:hover {
+  background-color: var(--main-green-alt);
+}
+
+.service__review {
+  display: grid;
+  grid-template-columns: 2rem 1fr 4rem;
+  grid-template-rows: 1.5rem 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  /* margin: 0.5rem 0; */
+  background-color: var(--main-grey-light)
+}
+
+.service__review-image {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.service__review-user {
+  grid-area: 1 / 2 / 3 / 3;
+  margin: 0;
+}
+
+.service__review-comment {
+  grid-area: 2 / 2 / 3 / 4;
+  margin: 0;
+}
+
+.service__review-score {
+  grid-area: 1 / 3 / 4 / 4;
+}
+
  /* =================PROVIDED SERVICES REQUEST DETAILS================= */
+
+/* .requestdetails__container {
+  height: calc(100vh - 162.44px);
+ } */
+
+.service__review-score {
+  grid-area: 1 / 3 / 4 / 4;
+}
+
+ /* =================REQUEST DETAILS================= */
+=======
+ /* =================PROVIDED SERVICES REQUEST DETAILS================= */
+>>>>>>> main
 
 /* .requestdetails__container {
   height: calc(100vh - 162.44px);

@@ -19,6 +19,7 @@ import ConsumedServiceDetailsPending from "./components/ConsumedServiceDetailsPe
 import ConsumedServiceDetailsRejected from "./components/ConsumedServiceDetailsRejected";
 import ServiceSendRequest from "./components/ServiceSendRequest"
 import ServiceSentRequest from "./components/ServiceSentRequest"
+import ServiceDetails from "./components/ServiceDetails";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             {/* Provided Services & Request Details*/}
             <Route path="/user/:userId/services/provided" element={<ProvidedServiceList />}></Route>                        
             <Route path="/user/:userId/services/provided/:serviceId/requests" element={<RequestListforProvidedServices />}></Route> 
+            {/* Request Details */}
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetails />}></Route>
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/pending" element={<RequestDetailsPending />}></Route>
             {/* Consumed Services & Request Details */}
@@ -43,9 +45,11 @@ function App() {
             <Route path="/user/:userId/services/consumed/requests/:requestId" element={<ConsumedServiceDetails />}></Route>
             <Route path="/user/:userId/services/consumed/requests/:requestId/pending" element={<ConsumedServiceDetailsPending />}></Route>
             <Route path="/user/:userId/services/consumed/requests/:requestId/rejected" element={<ConsumedServiceDetailsRejected />}></Route>
+            {/* Get service details  */}
+            <Route path="/service/:serviceId" element={<ServiceDetails />}></Route>
             {/* Send Request to use a Service  */}
-            <Route path="/service/:serviceID/request/new" element={<ServiceSendRequest />}></Route>
-            <Route path="/service/serviceID/request/sent" element={<ServiceSentRequest />}></Route>
+            <Route path="/service/:serviceId/request/new" element={<ServiceSendRequest />}></Route>
+            <Route path="/service/:serviceId/request/sent" element={<ServiceSentRequest />}></Route>
           </Routes>
         </div>
       <Footer />
