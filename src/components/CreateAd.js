@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
 import {useDropzone} from 'react-dropzone';
@@ -26,6 +26,9 @@ const CreateAd = () => {
   const [newAd, setNewAd] = useState(initialstate);
   const [images, setImages] = useState([]);
   const [imageError, setNewImageError] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const {getRootProps, getInputProps} = useDropzone({
     accept: {
@@ -60,16 +63,24 @@ const CreateAd = () => {
         />
   ));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    fetch('http://localhost:8000/test', { //=====CHANGE URL=====//
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(newAd)
-    })
-    .then((res) => console.log(res))
-    .catch(err => console.log(err))
+    setIsLoading(true)
+    try {
+      const res = await fetch('http://localhost:8000/user/:userId/services/provided/new', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(newAd),
+        credentials: 'include'
+      });
+      const data = await res.json();
+      if(data._id) {
+        navigate(`/service/${data._id}`)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+    setIsLoading(false)
   }
 
   const handleChange = (e) => {
@@ -219,7 +230,7 @@ const CreateAd = () => {
               id="telephone"
               name="telephone"
               country={'de'}
-              // onChange={(phone, country, e, formattedvalue )=> setNewUser({...newUser, telephone: formattedvalue})}
+              onChange={(phone, country, e, formattedvalue )=> setNewAd({...newAd, telephone: formattedvalue})}
             />
           </FormGroup>
 
@@ -272,7 +283,7 @@ const CreateAd = () => {
 
           {/* ======SUBMIT BUTTON====== */}
           <div className="form__submit">
-            <button className="form__submit-btn button">Create Ad</button>
+            {isLoading? <button disabled className="form__submit-btn button">Creating ad...</button> : <button className="form__submit-btn button">Create Ad</button>}
           </div>
         </Form>
         </Col>
