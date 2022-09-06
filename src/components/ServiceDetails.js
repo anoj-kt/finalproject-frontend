@@ -16,7 +16,6 @@ const ServiceDetails = () => {
         city: "",
         country: "",
         telephone: "",
-        createdAt: "",
         imagesList: [""]
     })
 
@@ -36,6 +35,7 @@ const ServiceDetails = () => {
                     if(data.priceCalculationType === 'per_squared_meter') {
                         data.priceCalculationType = 'per square meter'
                     }
+                    const createdDate = new Date(data.createdAt);
                     setData({
                         title: data.title,
                         description: data.description,
@@ -46,7 +46,7 @@ const ServiceDetails = () => {
                         city: data.address.city,
                         country: data.address.country,
                         telephone: data.telephone,
-                        createdAt: data.createdAt,
+                        createdAt: createdDate,
                         imagesList: data.imagesList.map((object) => {
                             return object.imageURL
                         })
@@ -57,7 +57,7 @@ const ServiceDetails = () => {
               }
         }
         fetchData()
-    })
+    }, [])
 
     const carouselItems = data?.imagesList.map((img, i) => {
         return (
@@ -106,18 +106,18 @@ const ServiceDetails = () => {
                         <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Details</h5>
                         <div className="service__details-content">
                             <i class="uil uil-user-check icon-green"></i>
-                            <p>Member since June 2020</p>
+                            <p>Member since {("0" + data.createdAt?.getDate()).slice(-2)}.{("0" + (data.createdAt?.getMonth() + 1)).slice(-2)}.{data.createdAt?.getFullYear()}</p>
                         </div>
                         <div className="service__details-content">
                             <i class="uil uil-phone icon-green"></i>
-                            <p>+49 121211212</p>
+                            <p>{data.telephone}</p>
                         </div>
                         <div className="service__details-content">
                             <i class="uil uil-map-marker icon-green"></i>
                             <div>
-                                <p>Mayway Straße 10</p>
-                                <p>Cologne</p>
-                                <p>Germany</p>
+                                <p>{data.street}</p>
+                                <p>{data.city}</p>
+                                <p>{data.country}</p>
                             </div>
                         </div>
                     </div>
@@ -142,12 +142,12 @@ const ServiceDetails = () => {
                 <Col sm={12} md={10}>
                     <div className="service__description service-border">
                         <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Description</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quos minus aliquam amet fugiat repellendus natus fugit sunt excepturi, veritatis ducimus sed, nesciunt, porro nostrum accusantium. Suscipit repudiandae hic quis rerum modi. Doloremque quo sapiente a excepturi animi dolores dignissimos aut dicta provident quos est, velit laborum totam, et voluptatem magni vero. Adipisci laudantium qui optio impedit eum repellendus suscipit ex, illum laborum aspernatur in eaque rerum repellat voluptatibus. Vero!</p>
+                        <p>{data.description}</p>
                     </div>
                 </Col>
             </Row>
             {/* ======REVIEWS====== */}
-            <Row className="justify-content-center mb-3">
+            {/* <Row className="justify-content-center mb-3">
                 <Col sm={12} md={10}>
                     <div className="service__reviews service-border">
                         <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Reviews</h5>
@@ -161,7 +161,7 @@ const ServiceDetails = () => {
                         </div>
                     </div>
                 </Col>
-            </Row>
+            </Row> */}
         </Container>
     )
 }
