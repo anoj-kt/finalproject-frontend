@@ -2,10 +2,30 @@ import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import user from '../assets/images/user.png'
 
 const ServiceDetails = () => {
+    const [data, setData] = useState()
+
+    let { serviceId } = useParams();
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`http://localhost:8000/service/${serviceId}`); 
+                const data = await res.json();
+                console.log(data)
+                if(data.user) {
+                  
+                }
+              } catch (error) {
+                console.log(error)
+              }
+        }
+        fetchData()
+    })
 
     return (
         <Container className="mb-4 mt-4">
@@ -54,7 +74,7 @@ const ServiceDetails = () => {
                         <Carousel.Item>
                             <img
                             className="d-block w-100 service__carousel-image"
-                            src="https://placebear.com/640/360"
+                            src=""
                             alt="Third slide"
                             />
                         </Carousel.Item>
