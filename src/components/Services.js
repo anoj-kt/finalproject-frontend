@@ -1,7 +1,22 @@
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 function Services() {
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`http://localhost:8000/service/all`); 
+                const resData = await res.json();
+              } catch (error) {
+                console.log(error)
+              }
+        }
+        fetchData()
+    }, [])
+    
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="holder.js/100px180" />

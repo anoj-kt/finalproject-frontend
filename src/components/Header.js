@@ -46,7 +46,7 @@ const Header = () => {
               <input type="text" name="" placeholder="Where ?"/>
             </div>
             <button className="button nav__btn-search"><i class="uil uil-search icon-white"></i><span>Search</span></button>
-            <Link to="/services">
+            <Link to="/service/all">
               <button className="button nav__btn-allservice"><i class="icon-white"></i>All services</button>
             </Link>
           </form>

@@ -49,7 +49,7 @@ function App() {
             <Route path="/user/:userId/services/consumed/requests/:requestId/pending" element={<ConsumedServiceDetailsPending />}></Route>
             <Route path="/user/:userId/services/consumed/requests/:requestId/rejected" element={<ConsumedServiceDetailsRejected />}></Route>
             {/* Get service details  */}
-            <Route path="/services" element={<Services />}></Route>
+            <Route path="/service/all" element={<Services />}></Route>
             <Route path="/service/:serviceId" element={<ServiceDetails />}></Route>
             {/* Send Request to use a Service  */}
             <Route path="/service/:serviceId/request/new" element={<ServiceSendRequest />}></Route>
