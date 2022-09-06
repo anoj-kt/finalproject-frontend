@@ -53,6 +53,16 @@ const ServiceDetails = () => {
         fetchData()
     })
 
+    const carouselItems = data?.imagesList.map((img, i) => {
+        <Carousel.Item>
+            <img
+            className="d-block w-100 service__carousel-image"
+            src={img}
+            alt={`Slide ${i}`}
+            />
+        </Carousel.Item>
+    })
+
     return (
         <Container className="mb-4 mt-4">
             {/* ======TITLE====== */}
