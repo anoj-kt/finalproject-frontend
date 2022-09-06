@@ -11,17 +11,26 @@ const initialstate = {
 const UserLogin = () => {
   const [user, setUser] = useState(initialstate);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:8000/testw', { //=====CHANGE URL=====//
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(user)
-    })
-    .then((res) => console.log(res))
-    .catch(err => console.log(err))
+    try {
+      const res = await fetch('http://localhost:8000/auth/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(user),
+        credentials: 'include'
+      });
+      const data = await res.json();
+      console.log(data)
+      if(data.user) {
+        
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
+  
 
   const handleChange = (e) => {
     const {name, value} = e.target;
