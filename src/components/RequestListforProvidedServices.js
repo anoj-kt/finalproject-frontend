@@ -5,7 +5,7 @@ const providedServiceDetails = () => {
   return (
     <Container fluid className="requestd_container">
       <div className='requestd__content'>
-          <h2>Request for my ... Service</h2>
+          <h2>My Provided Services</h2>
           <p class="lead">Pending Requests</p>
         <div className="requestd__flex">
         <div className='requestd__status'> 
@@ -21,8 +21,7 @@ const providedServiceDetails = () => {
           </Link>
         </div>
         </div>
-      </div>
-      
+      </div>s
     </Container>
   )
 }

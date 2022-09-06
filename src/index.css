@@ -327,6 +327,7 @@ a {
   right: 38.08%;
   top: 26.51%;
   bottom: 52.05%;
+  
 }
 
 .errorPage h1 {
@@ -346,6 +347,7 @@ a {
   text-align: center;
   color: #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(5px 5px 2px var(--main-black));
   
 }
 
@@ -366,6 +368,7 @@ a {
   text-align: center;
   color: #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(5px 5px 2px var(--main-black));
 }
 
 .errorPage p {
@@ -755,7 +758,6 @@ a {
 
  /* =================PROVIDED SERVICES REQUEST DETAILS================= */
 
-
 /* .requestdetails__container {
   height: calc(100vh - 162.44px);
  } */
@@ -917,4 +919,48 @@ a {
 #c-red {
   font-weight: var(--font-medium);
   color: red;
+}
+
+/* =================CONSUMED SERVICES================= */
+
+.userprofile__container {
+  height: calc(100vh - 162.44px);
+}
+
+.userprofile__container2 {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.userprofile__info {
+  margin: 2rem 0 0 2rem;
+}
+
+#userprofilepic {
+  border: 1px solid gray;
+  margin: 2rem 0rem 1rem 0rem;
+  
+}
+
+#uphr {
+  border: 1px solid var(--main-black);
+  border-radius: 50px;
+  width: 320px;
+}
+
+#uphr2 {
+  border: 1px solid var(--main-black);
+  border-radius: 50px;
+  width: 430px;
+}
+
+.service-buttons {
+  /* display: flex; */
+  margin: 2rem 0 0 2rem;
+}
+
+.service-buttons button {
+  color: var(--main-black);
+  font-weight: var(--font-medium);
+  margin: 0.5rem 3rem 0 0;
 }
