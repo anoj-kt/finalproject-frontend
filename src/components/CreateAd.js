@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
 import {useDropzone} from 'react-dropzone';
@@ -26,6 +26,8 @@ const CreateAd = () => {
   const [newAd, setNewAd] = useState(initialstate);
   const [images, setImages] = useState([]);
   const [imageError, setNewImageError] = useState();
+
+  const navigate = useNavigate();
 
   const {getRootProps, getInputProps} = useDropzone({
     accept: {
@@ -60,16 +62,23 @@ const CreateAd = () => {
         />
   ));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:8000/test', { //=====CHANGE URL=====//
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(newAd)
-    })
-    .then((res) => console.log(res))
-    .catch(err => console.log(err))
+    try {
+      const res = await fetch('http://localhost:8000/user/:userId/services/provided/new', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(newAd),
+        credentials: 'include'
+      });
+      const data = await res.json();
+      if(data._id) {
+        navigate(`/service/${data._id}`)
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   const handleChange = (e) => {
@@ -219,7 +228,7 @@ const CreateAd = () => {
               id="telephone"
               name="telephone"
               country={'de'}
-              // onChange={(phone, country, e, formattedvalue )=> setNewUser({...newUser, telephone: formattedvalue})}
+              onChange={(phone, country, e, formattedvalue )=> setNewAd({...newAd, telephone: formattedvalue})}
             />
           </FormGroup>
 
