@@ -23,8 +23,8 @@ function Services() {
     }, [])
 
     const cards = services?.map((item) => {
-       let path = "/service/:"+ item._id;
-        return <Col xs={4}>
+       let path = "/service/"+ item._id;
+        return <Col xs={4} key={item._id}>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img style={{height: "10rem", objectFit: 'cover'}} variant="top" src={item.imagesList[0].imageURL} />
                         <Card.Body>
@@ -39,7 +39,7 @@ function Services() {
     })
     
   return (
-    <Container>
+    <Container className="mt-5 mb-5">
         <Row>
             {cards}
         </Row>

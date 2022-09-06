@@ -57,11 +57,11 @@ const ServiceDetails = () => {
               }
         }
         fetchData()
-    }, [])
+    })
 
     const carouselItems = data?.imagesList.map((img, i) => {
         return (
-            <Carousel.Item>
+            <Carousel.Item key={i}>
                 <img
                 className="d-block w-100 service__carousel-image"
                 src={img}
