@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Services() {
+    const [services, setServices] = useState([])
 
     useEffect(() => {
 
@@ -10,26 +14,36 @@ function Services() {
             try {
                 const res = await fetch('http://localhost:8000/service/all'); 
                 const data = await res.json();
-                console.log(data)
+                setServices(data)
               } catch (error) {
                 console.log(error)
               }
         }
         fetchData()
     }, [])
+
+    const cards = services?.map((item) => {
+       let path = "/service/:"+ item._id;
+        return <Col xs={4}>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img style={{height: "10rem", objectFit: 'cover'}} variant="top" src={item.imagesList[0].imageURL} />
+                        <Card.Body>
+                            <Card.Title>{item.title}</Card.Title>
+                            <Card.Text>
+                            € {item.price} {item.priceCalculationType}
+                            </Card.Text>
+                            <Link to={path}><Button variant="primary">More Details</Button></Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+    })
     
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <Container>
+        <Row>
+            {cards}
+        </Row>
+    </Container>
   );
 }
 
