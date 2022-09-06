@@ -228,7 +228,9 @@ a {
   background-color: var(--main-green-alt);
 }
 
-
+.nav__btn-allservice{
+  margin-left: 1rem;
+}
 
 /* =================HOME================= */
 .home__container {
