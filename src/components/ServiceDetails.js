@@ -15,9 +15,24 @@ const ServiceDetails = () => {
         const fetchData = async () => {
             try {
                 const res = await fetch(`http://localhost:8000/service/${serviceId}`); 
-                const data = await res.json();
-                if(data) {
-                    setData(data[0])
+                const resData = await res.json();
+                if(resData) {
+                    const data = resData[0]
+                    setData({
+                        title: data.title,
+                        description: data.description,
+                        price: data.price,
+                        priceCalculationType: data.priceCalculationType,
+                        street: data.address.street,
+                        postalCode: data.address.postalCode,
+                        city: data.address.city,
+                        country: data.address.country,
+                        telephone: data.telephone,
+                        createdAt: data.createdAt,
+                        imagesList: data.imagesList.map((object) => {
+                            return object.imageURL
+                        })
+                    })
                 }
               } catch (error) {
                 console.log(error)
@@ -31,7 +46,7 @@ const ServiceDetails = () => {
             {/* ======TITLE====== */}
             <Row className="justify-content-center mb-2">
                 <Col md={10}>
-                    <h3>{data?.title}</h3>
+                    <h3></h3>
                 </Col>
             </Row>
             {/* ======LOCATION AND RATING====== */}
@@ -39,7 +54,7 @@ const ServiceDetails = () => {
                 <Col className="d-flex justify-content-between mb-3" md={{offset: 1, span: 6}}>
                     <div className="service__location">
                         <i class="uil uil-map-marker icon"></i>
-                        <h6>{data?.address.city}, {data?.address.country}</h6>
+                        <h6>, </h6>
                     </div>
                     <div>
                         {/* Overall score */}
