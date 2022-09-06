@@ -30,6 +30,12 @@ const ServiceDetails = () => {
                 const resData = await res.json();
                 if(resData) {
                     const data = resData[0]
+                    if(data.priceCalculationType === 'per_hour') {
+                        data.priceCalculationType = 'per hour'
+                    }
+                    if(data.priceCalculationType === 'per_squared_meter') {
+                        data.priceCalculationType = 'per square meter'
+                    }
                     setData({
                         title: data.title,
                         description: data.description,
@@ -92,34 +98,6 @@ const ServiceDetails = () => {
                 <Col sm={12} md={6} className="mb-3">
                     <Carousel fade className="service__carousel">
                         {carouselItems}
-                        {/* <Carousel.Item>
-                            <img
-                            className="d-block w-100 service__carousel-image"
-                            src="http://placeimg.com/640/360/any"
-                            alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100 service__carousel-image"
-                            src="https://www.placecage.com/640/360"
-                            alt="Second slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100 service__carousel-image"
-                            src="https://picsum.photos/640/360"
-                            alt="Third slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100 service__carousel-image"
-                            src=""
-                            alt="Third slide"
-                            />
-                        </Carousel.Item> */}
                     </Carousel>
                 </Col>
                 {/* ======DETAILS AND SEND REQ====== */}
@@ -154,8 +132,8 @@ const ServiceDetails = () => {
             <Row className="justify-content-center mb-3">
                 <Col sm={12} md={10}>
                 <div className="newrequest__price">
-                    <h3 className="newrequest__price-value">€15</h3>
-                    <p className="newrequest__price-type">per hour</p>
+                    <h3 className="newrequest__price-value">€{data.price}</h3>
+                    <p className="newrequest__price-type">{data.priceCalculationType}</p>
                 </div>
                 </Col>
             </Row>
