@@ -26,6 +26,7 @@ const CreateAd = () => {
   const [newAd, setNewAd] = useState(initialstate);
   const [images, setImages] = useState([]);
   const [imageError, setNewImageError] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -64,7 +65,7 @@ const CreateAd = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsLoading(true)
     try {
       const res = await fetch('http://localhost:8000/user/:userId/services/provided/new', {
         method: 'POST',
@@ -79,6 +80,7 @@ const CreateAd = () => {
     } catch (error) {
       console.log(error)
     }
+    setIsLoading(false)
   }
 
   const handleChange = (e) => {
@@ -281,7 +283,7 @@ const CreateAd = () => {
 
           {/* ======SUBMIT BUTTON====== */}
           <div className="form__submit">
-            <button className="form__submit-btn button">Create Ad</button>
+            {isLoading? <button disabled className="form__submit-btn button">Creating ad...</button> : <button className="form__submit-btn button">Create Ad</button>}
           </div>
         </Form>
         </Col>
