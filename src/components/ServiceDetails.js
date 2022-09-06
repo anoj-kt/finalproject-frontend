@@ -54,14 +54,17 @@ const ServiceDetails = () => {
     })
 
     const carouselItems = data?.imagesList.map((img, i) => {
-        <Carousel.Item>
-            <img
-            className="d-block w-100 service__carousel-image"
-            src={img}
-            alt={`Slide ${i}`}
-            />
-        </Carousel.Item>
+        return (
+            <Carousel.Item>
+                <img
+                className="d-block w-100 service__carousel-image"
+                src={img}
+                alt={`Slide ${i}`}
+                />
+            </Carousel.Item>
+        )
     })
+    
 
     return (
         <Container className="mb-4 mt-4">
@@ -88,7 +91,8 @@ const ServiceDetails = () => {
                 {/* ======IMAGES CAROUSEL====== */}
                 <Col sm={12} md={6} className="mb-3">
                     <Carousel fade className="service__carousel">
-                        <Carousel.Item>
+                        {carouselItems}
+                        {/* <Carousel.Item>
                             <img
                             className="d-block w-100 service__carousel-image"
                             src="http://placeimg.com/640/360/any"
@@ -115,7 +119,7 @@ const ServiceDetails = () => {
                             src=""
                             alt="Third slide"
                             />
-                        </Carousel.Item>
+                        </Carousel.Item> */}
                     </Carousel>
                 </Col>
                 {/* ======DETAILS AND SEND REQ====== */}
