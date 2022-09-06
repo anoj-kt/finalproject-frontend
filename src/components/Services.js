@@ -8,8 +8,9 @@ function Services() {
 
         const fetchData = async () => {
             try {
-                const res = await fetch(`http://localhost:8000/service/all`); 
-                const resData = await res.json();
+                const res = await fetch('http://localhost:8000/service/all'); 
+                const data = await res.json();
+                console.log(data)
               } catch (error) {
                 console.log(error)
               }
