@@ -16,9 +16,8 @@ const ServiceDetails = () => {
             try {
                 const res = await fetch(`http://localhost:8000/service/${serviceId}`); 
                 const data = await res.json();
-                console.log(data)
-                if(data.user) {
-                  
+                if(data) {
+                    setData(data[0])
                 }
               } catch (error) {
                 console.log(error)
@@ -32,7 +31,7 @@ const ServiceDetails = () => {
             {/* ======TITLE====== */}
             <Row className="justify-content-center mb-2">
                 <Col md={10}>
-                    <h3>Max Mustermann Transporter</h3>
+                    <h3>{data?.title}</h3>
                 </Col>
             </Row>
             {/* ======LOCATION AND RATING====== */}
@@ -40,9 +39,11 @@ const ServiceDetails = () => {
                 <Col className="d-flex justify-content-between mb-3" md={{offset: 1, span: 6}}>
                     <div className="service__location">
                         <i class="uil uil-map-marker icon"></i>
-                        <h6>Berlin, Germany</h6>
+                        <h6>{data?.address.city}, {data?.address.country}</h6>
                     </div>
-                    <div>Overall score</div>
+                    <div>
+                        {/* Overall score */}
+                    </div>
                 </Col>
             </Row>
             {/* ======IMAGES, DETAILS AND SEND REQUEST BUTTON====== */}
