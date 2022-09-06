@@ -3,6 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from '../assets/images/logo-color.png';
+import React, { Component }  from 'react';
+
 
 const errorPage = () => {
   return (

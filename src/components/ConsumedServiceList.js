@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import "bootstrap-icons/font/bootstrap-icons.css";
+import React, { Component }  from 'react';
 
 const consumedServiceList = () => {
 

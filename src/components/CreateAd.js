@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -63,7 +64,7 @@ const CreateAd = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:8000/test', { //=====CHANGE URL=====//
+    fetch('http://localhost:8000/service/', { //=====CHANGE URL=====//
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(newAd)

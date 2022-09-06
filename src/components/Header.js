@@ -1,10 +1,21 @@
+import React, { Component }  from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from '../assets/images/logo.png'
+import {useState} from "react"
+import { useCookies } from "react-cookie";
+
 
 const Header = () => {
+  const [user, setUser] = useState(false)
+  const [cookies, setCookie] = useCookies();
+
+  const logout = () => {
+    alert("User logged out")
+  }
+
   return (
     <Container fluid className="nav__container">
     <Row>
@@ -19,12 +30,29 @@ const Header = () => {
       </Col>
       <Col className="nav__btns">
         <div>
-          <Link to="/auth/signup">
-            <button className="button nav__btn-reg">Register</button>
-          </Link>
-          <Link to="/auth/login">
-            <button className="button nav__btn-login">Log in</button>
-          </Link>
+          {
+            !cookies.user ?
+            <div>
+              <Link to="/auth/signup">
+                <button className="button nav__btn-reg">Register</button>
+              </Link>
+              <Link to="/auth/login">
+                <button className="button nav__btn-login">Log in</button>
+              </Link>
+            </div>
+
+          :
+
+          <div>
+            <Link to={`/user/${cookies.user}/profile`}>
+              <button className="button nav__btn-reg">Profile</button>
+            </Link>
+            <Link to="/auth/login">
+              <button className="button nav__btn-login" onClick={logout}>Logout</button>
+            </Link>
+          </div>
+
+          }
           <Link to="/user/:userId/services/provided/new" style={{textDecoration: 'none'}}>
           <div className="nav__btn-createad">
             <i className="uil uil-plus icon"></i>

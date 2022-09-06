@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
+import React, { Component }  from 'react';
+
 
 const initialstate = {
   effectiveDate: Date,

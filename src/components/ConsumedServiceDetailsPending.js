@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import userimage from "../assets/images/user.png";
+import React, { Component }  from 'react';
 
 const consumedServiceDetailsPending = () => {
   return (
