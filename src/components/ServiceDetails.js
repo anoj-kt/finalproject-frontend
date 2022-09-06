@@ -6,7 +6,19 @@ import { Link, useParams } from 'react-router-dom';
 import user from '../assets/images/user.png'
 
 const ServiceDetails = () => {
-    const [data, setData] = useState()
+    const [data, setData] = useState({
+        title: "",
+        description: "",
+        price: "",
+        priceCalculationType: "",
+        street: "",
+        postalCode: "",
+        city: "",
+        country: "",
+        telephone: "",
+        createdAt: "",
+        imagesList: [""]
+    })
 
     let { serviceId } = useParams();
 
@@ -46,7 +58,7 @@ const ServiceDetails = () => {
             {/* ======TITLE====== */}
             <Row className="justify-content-center mb-2">
                 <Col md={10}>
-                    <h3></h3>
+                    <h3>{data.title}</h3>
                 </Col>
             </Row>
             {/* ======LOCATION AND RATING====== */}
@@ -54,7 +66,7 @@ const ServiceDetails = () => {
                 <Col className="d-flex justify-content-between mb-3" md={{offset: 1, span: 6}}>
                     <div className="service__location">
                         <i class="uil uil-map-marker icon"></i>
-                        <h6>, </h6>
+                        <h6>{data.city}, {data.country}</h6>
                     </div>
                     <div>
                         {/* Overall score */}
