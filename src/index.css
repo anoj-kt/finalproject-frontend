@@ -752,9 +752,9 @@ a {
 }
 
  /* =================REQUEST DETAILS================= */
-=======
+
  /* =================PROVIDED SERVICES REQUEST DETAILS================= */
->>>>>>> main
+
 
 /* .requestdetails__container {
   height: calc(100vh - 162.44px);
@@ -909,7 +909,7 @@ a {
   margin-top: 2rem;
  }
 
- .form-control {
+ .form_control {
   margin-top: 2rem;
   resize: none;
  }
