@@ -29,7 +29,7 @@ const UserSignup = () => {
   const [newUser, setNewUser] = useState(initialstate);
   const [passwordError, setPasswordError] = useState(passwordVerification)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if(newUser.password !== newUser.confirmPassword) {
@@ -37,13 +37,21 @@ const UserSignup = () => {
       return
     } 
 
-    fetch('http://localhost:8000/testw', { //=====CHANGE URL=====//
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(newUser)
-    })
-    .then((res) => console.log(res))
-    .catch(err => console.log(err))
+    try {
+      const res = await fetch('http://localhost:8000/auth/signup', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(newUser),
+        credentials: 'include'
+      });
+      const data = await res.json();
+      console.log(data)
+      if(data.user) {
+        
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   const handleChange = (e) => {
