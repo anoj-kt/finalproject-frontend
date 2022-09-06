@@ -21,8 +21,7 @@ const providedServiceDetails = () => {
           </Link>
         </div>
         </div>
-      </div>
-      
+      </div>s
     </Container>
   )
 }
