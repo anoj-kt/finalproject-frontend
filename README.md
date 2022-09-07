@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+<img src="/Users/onureredo/Desktop/findapro.png" alt="minilogo" style="zoom:75%;" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+- **Some people need help from others to get their jobe done with affordable prices:**
+- **Some people have the skills and knowledge to make money:**
+- **We are connecting these people and form a great Community!:**
 
-## Available Scripts
 
-In the project directory, you can run:
+***Wireframe*** [Figma] (https://www.figma.com/file/bpOKUXoCUE3JnweOeFUMJA/Final-project?node-id=0%3A1)
 
-### `npm start`
+***Documentation*** [GoogleDoc] (https://docs.google.com/document/d/1iDeGGYXcPGIMX6WqLscG7MIs4-Uyv36qVnILVdoHJ1w/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+***Database*** [Database](https://github.com/onureredo/finalproject-backend)has been developed as a part of the final project in [WBS Coding School Full-Stack Web & App Development Bootcamp](https://www.wbstraining.de/weiterbildung-full-stack-web-und-app-development-english/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## User Stories
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Signup:** As an anon I can sign up in the platform
+- **Login:** As a user I can login to the platform so i can discover some services
+- **Logout:** As a user I can logout from the platform so no one else can use it
+- **Edit User** As a user I can edit my profile, change my pw or email
+- **Search** As a user I can search in all Categorys
+- **Search in Location** As a user I can search in all Locations
+- **Create Advertisement** As a user I can create advertisement
+- **Edit Advertisement** As a user I can edit my advertisement
+- **Request for Service** As a user I can request for a service
+- **Accept/Reject** As a provider i can accept or reject a service request
+- **Message** As a user/provider i can send/recieve messages about a service
+- **Feedback & Comment** As a user/service provider i can give/recieve feedback&comments
