@@ -9,11 +9,14 @@ import { useCookies } from "react-cookie";
 
 
 const Header = () => {
-  const [user, setUser] = useState(false)
-  const [cookies, setCookie] = useCookies();
+  // const [user, setUser] = useState(false)
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 
   const logout = () => {
-    alert("User logged out")
+    alert("User logged out");
+    setCookie("user", '', {
+      path: "/"
+    });
   }
 
   return (
@@ -45,7 +48,7 @@ const Header = () => {
 
           <div>
             <Link to={`/user/${cookies.user}/profile`}>
-              <button className="button nav__btn-reg">Profile</button>
+              <button className="button nav__btn-reg">{/* {cookies.user} */}Profile</button>
             </Link>
             <Link to="/auth/login">
               <button className="button nav__btn-login" onClick={logout}>Logout</button>

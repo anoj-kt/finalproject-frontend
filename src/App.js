@@ -43,6 +43,7 @@ function App() {
             {/* Request Details */}
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId" element={<RequestDetails />}></Route>
             <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/pending" element={<RequestDetailsPending />}></Route>
+            <Route path="/user/:userId/services/provided/:serviceId/requests/:requestId/status/rejected" element={<RequestDetailsReject />}></Route>
             {/* Consumed Services & Request Details */}
             <Route path="/user/:userId/services/consumed/" element={<ConsumedServiceList />}></Route>
             <Route path="/user/:userId/services/consumed/requests/:requestId" element={<ConsumedServiceDetails />}></Route>
