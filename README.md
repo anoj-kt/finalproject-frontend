@@ -1,8 +1,8 @@
-![findapro](https://i.ibb.co/5KLdZKP/findapro.png)
+<img src="https://i.ibb.co/5KLdZKP/findapro.png" alt="findapro" style="zoom:50%;"/>
 
 ## Description
-**Some people need help from others to get their jobe done with affordable prices:**
-**Some people have the skills and knowledge to make money:**
+**Some people need help from others to get their jobe done with affordable prices, some people have the skills and knowledge to make money:**
+
 **We are connecting these people and form a great Community!:**
 
 
