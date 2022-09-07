@@ -5,6 +5,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import { Container, Row, Col } from 'react-bootstrap';
 import Spinner from 'react-bootstrap/Spinner';
 import { Link, useNavigate } from 'react-router-dom';
+import React, {Component} from 'react';
 
 function Services() {
     const [services, setServices] = useState([])
@@ -26,10 +27,10 @@ function Services() {
         fetchData()
     }, [])
 
-    const cards = services?.map((item) => {
+    const cards = services.map((item) => {
        let path = "/service/"+ item._id;
         return <Col xs={4} key={item._id}>
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{ width: '18rem', marginBottom: '3rem' }}>
                         <Card.Img style={{height: "10rem", objectFit: 'cover'}} variant="top" src={item.imagesList[0].imageURL} />
                         <Card.Body>
                             <Card.Title>{item.title}</Card.Title>

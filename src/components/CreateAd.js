@@ -56,7 +56,7 @@ const CreateAd = () => {
     setNewAd({...newAd, images})
   }, [images])
 
-  const thumbs = images?.map((file, index) => (
+  const thumbs = images.map((file, index) => (
         <img
           key={index}
           src={file}
