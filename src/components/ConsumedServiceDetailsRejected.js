@@ -49,6 +49,7 @@ const consumedServiceDetailsRejected = () => {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores suscipit dolorum magnam illum ullam ducimus? Earum corrupti quidem consequatur.
                                 </p>
                             </Col>
+                        
                             <input type="text" className="form-control" placeholder="Write your reply here"/>
                         </div>
                     </Row>
