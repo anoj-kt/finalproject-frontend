@@ -8,10 +8,12 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Services() {
     const [services, setServices] = useState([])
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
 
         const fetchData = async () => {
+          setIsLoading(true)
             try {
                 const res = await fetch('http://localhost:8000/service/all'); 
                 const data = await res.json();
@@ -19,6 +21,7 @@ function Services() {
               } catch (error) {
                 console.log(error)
               }
+              setIsLoading(false)
         }
         fetchData()
     }, [])
