@@ -67,7 +67,7 @@ const CreateAd = () => {
     e.preventDefault();
     setIsLoading(true)
     try {
-      const res = await fetch('http://localhost:8000/user/:userId/services/provided/new', {
+      const res = await fetch('https://farll.herokuapp.com/user/:userId/services/provided/new', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(newAd),
