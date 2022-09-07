@@ -8,34 +8,32 @@ const Footer = () => {
   return (
     <Container fluid className="footer__container">
       <Row className="justify-content-center">
-        <Col md={4} className="footer__COL">
+        <Col md={3} className="footer__COL">
           <div>
-            <h5>About Us</h5>
-            <p>The team</p>
-            <p>Help</p>
-            <p>Privacy</p>
-            <p>Terms & conditions</p>
+             <h5>About Us</h5>
+            <a href='#'><p>Our Team</p></a>
+            <a href='#'><p>Help</p></a>
+            <a href='#'><p>Privacy</p></a>
+            <a href='#'><p>Terms & Conditions</p></a>
           </div>
         </Col>
-        <Col md={4} className="footer__COL">
+        <Col md={3} className="footer__COL">
           <div>
             <h5>Contact</h5>
-            <p>Support</p>
-            <p>FAQ</p>
-            <p>Cookies policy</p>
-            <p>Contact us</p>
+            <a href='#'><p>Support</p></a>
+            <a href='#'><p>FAQ</p></a>
+            <a href='#'><p>Cookies Policy</p></a>
+            <a href='#'><p>Contact Us</p></a>
           </div>
         </Col>
-        <Col md={4} className="footer__COL">
+        <Col md={3} className="footer__COL">
           <div>
             <h5>Social Media</h5>
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>Twitter</p>
-            <p>LinkedIn</p>
+            <a href='#'><p>Instagram</p></a>
+            <a href='#'><p>Twitter</p></a>
+            <a href='#'><p>Facebook</p></a>
+            <a href='#'><p>LinkedIn</p></a>
           </div>
-        </Col>
-        <Col>
         </Col>
       </Row>
     </Container>

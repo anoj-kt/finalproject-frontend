@@ -64,7 +64,7 @@ const ServiceSendRequest = () => {
     <Container className="form__container">
       <Row className="justify-content-center align-items-center mb-4">
         <Col md={12} lg={5}> {/* ======TITLE OF SERVICE====== */}
-          <h3>Max Mustermann Transporter</h3>
+          <h3>Service Request</h3>
         </Col>
         <Col lg={2} className="newrequest__price-COL"> {/* ======PRICE OF SERVICE====== */}
           <div className="newrequest__price">

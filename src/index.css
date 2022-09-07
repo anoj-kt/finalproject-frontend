@@ -475,8 +475,6 @@ a {
 .footer__container {
   background-color: var(--main-black);
   color: white;
-  
-
 }
 
 .footer__COL {
@@ -484,6 +482,18 @@ a {
   justify-content: center;
   padding-top: 0.5rem;
 }
+
+.footer__COL a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__COL a:hover {
+  transition: ease-in-out 0.25s;
+  text-decoration: none;
+  color: var(--main-yellow);
+}
+
 
 
 /* =================PROVIDES SERVICE LIST================= */

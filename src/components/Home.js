@@ -18,7 +18,7 @@ const Home = () => {
       <Row>
         <Col md={{ span: 6, offset: 6 }} className="home__text-right-COL nopadding">
           <div className="home__text-right">
-            <p>findApro is a Service Market place where you can share your knowledge and skills with others.</p>
+            <p>findApro is a service market place where you can share your knowledge and skills with others.</p>
             <p>Give and Recieve Feedback to help the Community</p>
           </div>
         </Col>
