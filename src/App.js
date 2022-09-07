@@ -8,7 +8,7 @@ import UserLogin from './components/UserLogin';
 import UserSignup from './components/UserSignup';
 import UserProfile from './components/UserProfile';
 import Footer from './components/Footer';
-// import CreateAd from './components/CreateAd'
+import CreateAd from './components/CreateAd'
 import ErrorPage from './components/ErrorPage';
 import RequestListforProvidedServices from './components/RequestListforProvidedServices';
 import ProvidedServiceList from "./components/ProvidedServiceList";
@@ -36,7 +36,7 @@ function App() {
             <Route path="/auth/login" element={<UserLogin />}></Route>
             <Route path="/auth/signup" element={<UserSignup />}></Route>
             <Route path="/user/:userid/profile" element={<UserProfile />}></Route>
-            {/* <Route path="/user/:userId/services/provided/new" element={<CreateAd />}></Route>                              */}
+            <Route path="/user/:userId/services/provided/new" element={<CreateAd />}></Route>                             
             <Route path="/404" element={<ErrorPage />}></Route>
             {/* Provided Services & Request Details*/}
             <Route path="/user/:userId/services/provided" element={<ProvidedServiceList />}></Route>                        

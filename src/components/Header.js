@@ -26,7 +26,7 @@ const Header = () => {
         <Link to="/" className="nav__brand">
           <img src={logo} alt="logo" className="nav__logo" />
           <div className="nav__logo-title">
-            <h1>app-name</h1>
+            <h1>findapro</h1>
             <p>affordable, fast, reliable, and local</p>
           </div>
         </Link>

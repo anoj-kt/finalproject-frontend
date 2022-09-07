@@ -17,6 +17,7 @@ const ServiceDetails = () => {
         city: "",
         country: "",
         telephone: "",
+        createdAt: new Date(),
         imagesList: [""]
     })
 
@@ -60,7 +61,7 @@ const ServiceDetails = () => {
         fetchData()
     })
 
-    const carouselItems = data?.imagesList.map((img, i) => {
+    const carouselItems = data.imagesList.map((img, i) => {
         return (
             <Carousel.Item key={i}>
                 <img
@@ -107,7 +108,7 @@ const ServiceDetails = () => {
                         <h5 style={{borderBottom: "1px solid var(--main-grey)"}}>Details</h5>
                         <div className="service__details-content">
                             <i class="uil uil-user-check icon-green"></i>
-                            <p>Member since {("0" + data.createdAt?.getDate()).slice(-2)}.{("0" + (data.createdAt?.getMonth() + 1)).slice(-2)}.{data.createdAt?.getFullYear()}</p>
+                            <p>Member since {("0" + data.createdAt.getDate()).slice(-2)}.{("0" + (data.createdAt.getMonth() + 1)).slice(-2)}.{data.createdAt.getFullYear()}</p>
                         </div>
                         <div className="service__details-content">
                             <i class="uil uil-phone icon-green"></i>
