@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { Container, Row, Col } from 'react-bootstrap';
+import Spinner from 'react-bootstrap/Spinner';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Services() {
@@ -37,6 +38,10 @@ function Services() {
                     </Card>
                 </Col>
     })
+
+    const spinner = <Col xs={12} style={{ width: '18rem', margin: 'auto', height: '100vh' }} className="justify-content-center">
+                      <Spinner animation="border" />
+                    </Col>
     
   return (
     <Container className="mt-5 mb-5">
