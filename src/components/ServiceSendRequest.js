@@ -20,7 +20,7 @@ const ServiceSendRequest = () => {
   const [newRequest, setNewRequest] = useState(initialstate);
 
   useEffect(() => {
-    fetch('http://localhost:8000/service/:serviceID/request/new') //=====CHANGE URL=====//
+    fetch('https://farll.herokuapp.com/service/:serviceID/request/new') //=====CHANGE URL=====//
     .then((res) => console.log(res))
     .catch(err => console.log(err))
   })

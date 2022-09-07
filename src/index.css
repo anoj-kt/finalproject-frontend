@@ -228,7 +228,9 @@ a {
   background-color: var(--main-green-alt);
 }
 
-
+.nav__btn-allservice{
+  margin-left: 1rem;
+}
 
 /* =================HOME================= */
 .home__container {
@@ -683,6 +685,8 @@ a {
 
 .service__carousel-image {
   border-radius: 10px;
+  height: 25rem;
+  object-fit: cover;
 }
 
 .service__details-content{
