@@ -49,7 +49,7 @@ function Services() {
   return (
     <Container className="mt-5 mb-5">
         <Row>
-            {cards}
+            {isLoading? spinner : cards}
         </Row>
     </Container>
   );
