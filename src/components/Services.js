@@ -15,7 +15,7 @@ function Services() {
         const fetchData = async () => {
           setIsLoading(true)
             try {
-                const res = await fetch('http://localhost:8000/service/all'); 
+                const res = await fetch('https://farll.herokuapp.com/service/all'); 
                 const data = await res.json();
                 setServices(data)
               } catch (error) {
