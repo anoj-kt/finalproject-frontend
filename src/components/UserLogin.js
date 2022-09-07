@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import React, { Component }  from 'react';
+import { useCookies } from 'react-cookie';
+
 
 const initialstate = {
   email: "",
@@ -10,6 +13,9 @@ const initialstate = {
 
 const UserLogin = () => {
   const [user, setUser] = useState(initialstate);
+  const [cookies, setCookie] = useCookies(["user"]);
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +30,10 @@ const UserLogin = () => {
       const data = await res.json();
       console.log(data)
       if(data.user) {
-        
+        setCookie("user", data.user, {
+          path: "/"
+        });
+        navigate("/")
       }
     } catch (error) {
       console.log(error)

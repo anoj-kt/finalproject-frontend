@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -54,12 +55,12 @@ const requestDetailsPending = () => {
                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi praesentium vero, modi sunt ratione exercitationem, officia expedita doloremque dolores culpa cumque molestiae veniam corrupti laborum! Ipsam inventore maiores ad assumenda eius consectetur itaque hic molestias. Necessitatibus totam ducimus alias atque ab quam, rerum dignissimos fugiat asperiores rem sint quis praesentium eveniet saepe fugit itaque quidem nobis! Molestias tempora exercitationem et debitis modi accusantium nisi deserunt at consequuntur labore nostrum, nobis vitae hic aspernatur dolorum enim fuga fugiat omnis nemo? Tempora numquam aut consequuntur itaque mollitia ex quam sit inventore.
                                 </p>    
                             </Col>
+                            <input type="text" className="form-control" placeholder="Write your reply here"/>
                         </div>
                     </Row>
                 </Col>
                 <Col md={12}>
                     <div className='replytext'>
-                        <input type="text" id="replytextinput" placeholder="Write your reply"></input>
                         {/* <i class="bi bi-send-fill"></i> */}
                     </div>
                     <div className='requestd__btns2'>  

@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -50,12 +51,12 @@ const requestDetails = () => {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores suscipit dolorum magnam illum ullam ducimus? Earum corrupti quidem consequatur.
                                 </p>  
                             </Col>
+                            <input type="text" className="form-control" placeholder="Write your reply here"/>
                         </div>
                     </Row>
                 </Col>
                 <Col md={12}>
                     <div className='replytext'>
-                        <input type="text" id="replytextinput" placeholder="Write your reply"></input>
                         {/* <i class="bi bi-send-fill"></i> */}
                     </div>
                     <div className='requestd__btns'>

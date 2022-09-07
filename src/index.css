@@ -783,11 +783,16 @@ a {
 }
 
 .requestdetails__chatbox{
-  border: 1px solid gray;
+  border: 1px solid rgb(203, 203, 203);
+  border-radius: 10px;
 }
 
 .requestdetails__chatbox p {
   padding-left: 1rem;
+}
+
+.addmargin__2 {
+  margin-top: 10rem;
 }
 
 #chatboxmsg {
@@ -832,6 +837,7 @@ a {
   font-weight: var(--font-medium);
   margin-right: 2rem;
 }
+
 
 .chatboxback img {
   float: left;
@@ -967,4 +973,11 @@ a {
   color: var(--main-black);
   font-weight: var(--font-medium);
   margin: 0.5rem 3rem 0 0;
+}
+.feedbackarea {
+  margin-top: 3rem;
+}
+
+.form-control{
+  resize: none;
 }

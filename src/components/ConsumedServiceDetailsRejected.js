@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import userimage from "../assets/images/user.png";
+import React, { Component }  from 'react';
 
 const consumedServiceDetailsRejected = () => {
   return (
@@ -48,10 +49,10 @@ const consumedServiceDetailsRejected = () => {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo asperiores suscipit dolorum magnam illum ullam ducimus? Earum corrupti quidem consequatur.
                                 </p>
                             </Col>
+                            <input type="text" className="form-control" placeholder="Write your reply here"/>
                         </div>
                     </Row>
                 </Col>
-                <input type="text" id="replytextinput" placeholder="Write your reply"></input>
             </div>
         </Container>
   )

@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
+import React, { Component }  from 'react';
+
 
 const providedServiceDetails = () => {
   return (
@@ -10,7 +12,7 @@ const providedServiceDetails = () => {
         <div className="requestd__flex">
         <div className='requestd__status'> 
           <Link to="/user/:userid/profile"style={{textDecoration: 'none', color: 'var(--main)'}}>
-           <p className='requestp__hover'>David Harbour</p>
+           <p className='requestp__hover'>Web Design</p>
           </Link>
           <p>Request Date: 15.08.2022</p>
           <p>Status</p>
@@ -21,7 +23,7 @@ const providedServiceDetails = () => {
           </Link>
         </div>
         </div>
-      </div>s
+      </div>
     </Container>
   )
 }

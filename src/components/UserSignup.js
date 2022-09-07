@@ -1,7 +1,8 @@
+import React, { Component }  from 'react';
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
@@ -29,6 +30,8 @@ const UserSignup = () => {
   const [newUser, setNewUser] = useState(initialstate);
   const [passwordError, setPasswordError] = useState(passwordVerification)
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -47,7 +50,7 @@ const UserSignup = () => {
       const data = await res.json();
       console.log(data)
       if(data.user) {
-        
+        navigate("/auth/login")
       }
     } catch (error) {
       console.log(error)

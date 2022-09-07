@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -65,6 +66,7 @@ const CreateAd = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     setIsLoading(true)
     try {
       const res = await fetch('https://farll.herokuapp.com/user/:userId/services/provided/new', {
