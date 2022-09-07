@@ -25,7 +25,7 @@ const ServiceDetails = () => {
 
         const fetchData = async () => {
             try {
-                const res = await fetch(`http://localhost:8000/service/${serviceId}`); 
+                const res = await fetch(`https://farll.herokuapp.com/service/${serviceId}`); 
                 const resData = await res.json();
                 if(resData) {
                     const data = resData[0]
